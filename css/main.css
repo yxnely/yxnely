@@ -1,0 +1,296 @@
+body {
+	font-family: "Karla", "Arial", sans-serif;
+	letter-spacing: 1.2px;
+}
+
+/* ----------------- CTA -----------------*/
+h1 {
+	color: #f9f9f9; 
+	font-family: "Montserrat";
+	font-size: 2.7em;
+	white-space: nowrap;
+	overflow: hidden;
+	line-height: 1.25em;
+	width: 14em;
+	animation: type 3s steps(50, end); 
+}
+
+.cta {
+	height: 400px;
+	background-color: #FEA299;
+	color: #FAFFFD;
+}
+
+nav {
+	width: 100%;
+	text-align: center;
+	padding-top: 3%;
+	height: 100px;
+	z-index: 150;
+}
+
+nav a:nth-of-type(1), 
+nav a:nth-of-type(2), 
+nav a:nth-of-type(3), 
+nav a:nth-of-type(4) {
+	padding-right: 20px;
+}
+
+.nav-scrolled {
+	position: fixed;
+	width: 100%;
+	box-shadow: 0 2px 3px rgba(0,0,0,.3);
+	background-color: #FEA299;
+}
+
+a, a:link, a:visited, a:hover, a:active {
+	color: #FAFFFD;
+	font-family: "Montserrat";
+	text-decoration: none;
+}
+
+nav a:hover {
+	color: #212121;
+}
+
+.cta > div {
+	max-width: 402px;
+	margin: auto;
+	padding-top: 3%;
+}
+
+div:nth-of-type(1) > div > p {
+	margin-top: 5%;
+	font-size: 1.6em;
+	text-align: center;
+	font-family: "Montserrat";
+}
+
+.fadeIn {
+	-webkit-animation-duration: 3.5s;
+}
+
+.typed-cursor {
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
+/* ----------------- Main Body -----------------*/
+
+h2, h3, h4 {
+	font-family: "Montserrat";
+	font-weight: "bold";
+	text-transform: uppercase;
+	font-size: 1.3em;
+	margin-top: 2%;
+	margin-bottom: 2.5%;
+}
+
+p {
+	font-size: 1.3em;
+}
+
+#about {
+	margin: 2% auto 2% auto;
+	max-width: 700px;
+	padding: 15px;
+	text-align: left;
+	font-size: 1.1em;
+}
+
+#about > img {
+	height: 175px;
+	float: right;
+	margin-top: 30px;
+}
+
+#about > p, #contact p {
+	max-width: 500px;
+	margin: 0;
+}
+
+#work p a:link, #work p a:visited, #work p a:hover, #work p a:active,
+#contact p a:link, #contact p a:visited, #contact p a:hover, #contact p a:active {
+	color: #FEA299;
+	border-style: none;
+}
+
+#work, #skills {
+	clear: both;
+	width: 100%;
+	text-align: center;
+	background-color: #EDEFF2;
+	padding-bottom: 3%;
+}
+
+#skills {
+	width: 100%;
+	margin: auto;
+	padding-top: 10px;
+}
+
+#skills div {
+	max-width: 750px;
+	margin: auto;
+}
+
+#skills div img {
+	height: 100px;
+	margin: 10px;
+}
+
+#experience {
+	max-width: 1000px;
+	margin: auto;
+	padding-top: 30px;
+}
+
+#experience h2 {
+	text-align: center;
+}
+
+#experience article ul li {
+	line-height: 35px;
+	list-style-type: circle;
+	margin-left: 15px;
+}
+
+#contact {
+	max-width: 600px;
+	margin: 2% auto;
+}
+
+#contact a img {
+	height: 35px;
+	margin: 10px;
+}
+
+.col-md-6 {
+	margin-bottom: 2%;
+}
+
+.inner {
+	max-width: 400px;
+	padding-top: 20px;
+	margin: auto;
+}
+
+.phone {
+	max-width: 700px;
+	margin-top: 1%;
+}
+
+.cards {
+	max-width: 300px;
+	margin-top: 2%;
+}
+
+.cards:nth-of-type(1) {
+	padding-left: 10px;
+}
+
+.inner span {
+	padding: 5px;
+	margin-bottom: 30px;
+	background-color: #f9f9f9;
+	border-radius: 3px;
+}
+
+.quote {
+	max-width: 600px;
+	margin-top: 2%;
+}
+
+/* ----------------- Media Queries -----------------*/
+
+@media only screen and (min-width: 700px) {
+	.cta {
+		height: 400px;
+	}
+}
+
+@media only screen and (min-width: 551px) and (max-width: 699px) {
+  	.phone, .cards, .quote {
+  		width: 550px;
+  	}
+
+  	h1 {
+		font-size: 2.0em;
+		padding-left: 35px;
+	}
+
+	.nav-scrolled {
+		height: 60px;
+	}
+}
+
+@media only screen and (max-width: 550px) {
+	#about, #experience, #work {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+	h1 {
+		font-size: 2.0em;
+		padding-left: 35px;
+	}
+
+	.nav-scrolled {
+		height: 50px;
+	}
+
+	.cta {
+		height: 350px;
+	}
+
+	.phone, .cards, .quote {
+		width: 300px;
+		margin-top: 3%;
+	}
+
+	#about > p {
+		font-size: 1.1em;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
