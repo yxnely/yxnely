@@ -17,8 +17,8 @@ h1 {
 
 .cta {
 	height: 400px;
-	background-color: #FEA299;
-	color: #FAFFFD;
+	background-color: #298DFF;
+	color: #f9f9f9;
 }
 
 nav {
@@ -40,17 +40,17 @@ nav a:nth-of-type(4) {
 	position: fixed;
 	width: 100%;
 	box-shadow: 0 2px 3px rgba(0,0,0,.3);
-	background-color: #FEA299;
+	background-color: #298DFF;
 }
 
 a, a:link, a:visited, a:hover, a:active {
-	color: #FAFFFD;
+	color: #f9f9f9;
 	font-family: "Montserrat";
 	text-decoration: none;
 }
 
 nav a:hover {
-	color: #212121;
+	color: #f9f9f9;
 }
 
 .cta > div {
@@ -128,7 +128,7 @@ p {
 
 #work p a:link, #work p a:visited, #work p a:hover, #work p a:active,
 #contact p a:link, #contact p a:visited, #contact p a:hover, #contact p a:active {
-	color: #FEA299;
+	color: #CD1A37;
 	border-style: none;
 }
 
@@ -216,6 +216,15 @@ p {
 .quote {
 	max-width: 600px;
 	margin-top: 2%;
+}
+
+#skills div span {
+    padding: 15px;
+    background-color: #CD1A37;
+    color: #f9f9f9;
+    line-height: 70px;
+    border-radius: 5px;
+    margin: 5px;
 }
 
 /* ----------------- Media Queries -----------------*/
