@@ -17,7 +17,7 @@ $(function() {
       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
       if (target.length) {
         $('html, body').animate({
-          scrollTop: target.offset().top - 100
+          scrollTop: target.offset().top - 0
         }, 1000);
         return false;
       }
@@ -26,11 +26,11 @@ $(function() {
 });
 
 $(function(){
-        $(".element").typed({
-            strings: ["hi, i'm yanely ramirez"],
-            typeSpeed: 0
-        });
+    $(".element").typed({
+      strings: ["hi, i'm yanely ramirez"],
+      typeSpeed: 0
     });
+  });
 
 lightbox.option({
   'resizeDuration': 400,

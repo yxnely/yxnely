@@ -3,54 +3,58 @@ body {
 	letter-spacing: 1.2px;
 }
 
+.navbar {
+  background-color: #360982;
+  border-radius: 0px;
+  margin-bottom: 0px;
+  padding-top: 10px;
+}
+
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
+}
+
+.icon-bar {
+  background-color: #f9f9f9;
+}
+
 /* ----------------- CTA -----------------*/
 h1 {
-	color: #f9f9f9; 
+	color: #f9f9f9;
 	font-family: "Montserrat";
-	font-size: 2.7em;
+	font-size: 2.5em;
 	white-space: nowrap;
 	overflow: hidden;
 	line-height: 1.25em;
 	width: 14em;
-	animation: type 3s steps(50, end); 
+	animation: type 3s steps(50, end);
 }
 
 .cta {
-	height: 400px;
-	background-color: #298DFF;
+	height: 300px;
+	background-color: #360982;
 	color: #f9f9f9;
 }
 
-nav {
-	width: 100%;
-	text-align: center;
-	padding-top: 3%;
-	height: 100px;
-	z-index: 150;
-}
-
-nav a:nth-of-type(1), 
-nav a:nth-of-type(2), 
-nav a:nth-of-type(3), 
-nav a:nth-of-type(4) {
-	padding-right: 20px;
-}
-
-.nav-scrolled {
-	position: fixed;
-	width: 100%;
-	box-shadow: 0 2px 3px rgba(0,0,0,.3);
-	background-color: #298DFF;
-}
-
-a, a:link, a:visited, a:hover, a:active {
+a, a:link, a:visited {
 	color: #f9f9f9;
 	font-family: "Montserrat";
 	text-decoration: none;
 }
 
+.nav li a:focus, .nav li a:hover {
+  color: #edeff2;
+  background-color: transparent;
+}
+
 nav a:hover {
-	color: #f9f9f9;
+	color: #212121;
 }
 
 .cta > div {
@@ -68,6 +72,10 @@ div:nth-of-type(1) > div > p {
 
 .fadeIn {
 	-webkit-animation-duration: 3.5s;
+}
+
+h4 small {
+  line-height: 1.5;
 }
 
 .typed-cursor {
@@ -99,12 +107,19 @@ h2, h3, h4 {
 	font-weight: "bold";
 	text-transform: uppercase;
 	font-size: 1.3em;
-	margin-top: 2%;
-	margin-bottom: 2.5%;
+  margin-bottom: 5px;
 }
 
 p {
 	font-size: 1.3em;
+  text-align: left;
+}
+
+article p {
+  max-width: 525px;
+  margin: 0 auto;
+  line-height: 1.6em;
+  margin-bottom: 10px;
 }
 
 #about {
@@ -121,14 +136,14 @@ p {
 	margin-top: 30px;
 }
 
-#about > p, #contact p {
+#about > p {
 	max-width: 500px;
 	margin: 0;
 }
 
 #work p a:link, #work p a:visited, #work p a:hover, #work p a:active,
 #contact p a:link, #contact p a:visited, #contact p a:hover, #contact p a:active {
-	color: #CD1A37;
+	color: #360982;
 	border-style: none;
 }
 
@@ -136,18 +151,19 @@ p {
 	clear: both;
 	width: 100%;
 	text-align: center;
-	background-color: #EDEFF2;
-	padding-bottom: 3%;
+	background-color: #F3F3F3;
+	padding: 2%;
+  margin: 0 auto;
 }
 
 #skills {
 	width: 100%;
 	margin: auto;
-	padding-top: 10px;
+	padding-top: 2%;
 }
 
 #skills div {
-	max-width: 750px;
+	max-width: 900px;
 	margin: auto;
 }
 
@@ -164,6 +180,7 @@ p {
 
 #experience h2 {
 	text-align: center;
+  margin-bottom: 15px;
 }
 
 #experience article ul li {
@@ -175,6 +192,7 @@ p {
 #contact {
 	max-width: 600px;
 	margin: 2% auto;
+  padding: 10px;
 }
 
 #contact a img {
@@ -182,23 +200,25 @@ p {
 	margin: 10px;
 }
 
+#about h2, #skills h2, #experience h2, #contact h2 {
+  font-size: 1.6em;
+}
+
 .col-md-6 {
 	margin-bottom: 2%;
 }
 
 .inner {
-	max-width: 400px;
 	padding-top: 20px;
-	margin: auto;
 }
 
 .phone {
-	max-width: 700px;
-	margin-top: 1%;
+	max-width: 80%;
+	margin-top: 2%;
 }
 
 .cards {
-	max-width: 300px;
+	max-width: 250px;
 	margin-top: 2%;
 }
 
@@ -207,31 +227,41 @@ p {
 }
 
 .inner span {
-	padding: 5px;
-	margin-bottom: 30px;
-	background-color: #f9f9f9;
-	border-radius: 3px;
+	font-weight: bold;
+  letter-spacing: .3em;
+  color: #3c3c3c;
+}
+
+.screen {
+  width: 80%;
+  margin-top: 2%;
 }
 
 .quote {
-	max-width: 600px;
+	max-width: 80%;
 	margin-top: 2%;
 }
 
 #skills div span {
-    padding: 15px;
-    background-color: #CD1A37;
-    color: #f9f9f9;
-    line-height: 70px;
-    border-radius: 5px;
-    margin: 5px;
+  padding: 15px;
+  line-height: 70px;
+  margin: 5px;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+  white-space: nowrap;
 }
 
 /* ----------------- Media Queries -----------------*/
 
+@media only screen and (min-width: 992px) and (max-width: 1099px) {
+	.cards {
+    width: 200px;
+  }
+}
+
 @media only screen and (min-width: 700px) {
 	.cta {
-		height: 400px;
+		height: 275px;
 	}
 }
 
@@ -243,10 +273,6 @@ p {
   	h1 {
 		font-size: 2.0em;
 		padding-left: 35px;
-	}
-
-	.nav-scrolled {
-		height: 60px;
 	}
 }
 
@@ -261,16 +287,12 @@ p {
 		padding-left: 35px;
 	}
 
-	.nav-scrolled {
-		height: 50px;
-	}
-
 	.cta {
-		height: 350px;
+		height: 250px;
 	}
 
-	.phone, .cards, .quote {
-		width: 300px;
+	.phone, .cards, .quote, .screen {
+		width: 100%;
 		margin-top: 3%;
 	}
 
@@ -278,28 +300,3 @@ p {
 		font-size: 1.1em;
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
