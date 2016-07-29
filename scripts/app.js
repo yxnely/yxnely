@@ -10,6 +10,13 @@ $(window).scroll(function() {
   }
 });
 
+var windowsize = $( window ).width();
+console.log(windowsize);
+
+if (windowsize <= 425) {
+  $(".pull-left").remove();
+};
+
 $(function() {
   $('a[href*="#"]:not([href="#"])').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
