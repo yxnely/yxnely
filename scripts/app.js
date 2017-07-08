@@ -10,8 +10,17 @@ $(window).scroll(function() {
   }
 });
 
+$(".inner").mouseover(function () {
+  $(".overlay p").show();
+  $(".overlay span").show();
+  $(".overlay h2").show();
+  $(".overlay").css({
+    "opacity": ".5",
+    "background-color": "#222"
+  })
+});
+
 var windowsize = $( window ).width();
-console.log(windowsize);
 
 if (windowsize <= 425) {
   $(".pull-left").remove();
@@ -40,4 +49,4 @@ lightbox.option({
   'positionFromTop': 50,
   'maxWidth': 800,
   'maxHeight': 600
-})
+});

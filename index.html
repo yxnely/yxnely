@@ -1,170 +1,92 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Yanely Ramirez | Web Developer</title>
-	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/animate.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<link rel="stylesheet" type="text/css" href="css/lightbox.min.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/lightbox.min.css">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/skeleton.css">
+	<link rel="stylesheet" type="text/css" href="css/intro.css">
 	<link rel="icon" type="image/png" href="images/favicon.png" sizes="16x16">
 </head>
 <body>
-  <nav class="navbar navbar-fixed-top">
-    <div class="container-fluid">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#personal-nav" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-      </div>
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="personal-nav">
-        <ul class="nav navbar-nav">
-          <li class="active"><a href="#about">About<span class="sr-only">(current)</span></a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#work">Work</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="./images/Ramirez_Yanely_Resume.pdf" target="_blank">Resume</a></li>
-        </ul>
-      </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-  </nav>
-  <div>
-    <div class="cta">
-      <img src="images/IMG_2340.jpg" alt="Yanely Ramirez" class="pull-left dontshow"/>
-  		<h1 class="animated fadeInDown">Hi, I'm Yanely Ramirez</h1>
-  		<span class="animated fadeInUp">Web Developer &amp; Web Designer</span>
-  	</div>
-  </div>
+    <main>
+        <div id="navigation" class="container navigation-container">
+            <i class="fa fa-bars fa-2x" id="menu" aria-hidden="true"></i>
+            <nav class="row fadeIn animated">
+                <a class="twelve columns" href="#">Home</a>
+                <a class="twelve columns" href="#web">Work</a>
+                <!-- <a class="twelve columns" href="#">Blog</a> -->
+            </nav>
+        </div>
+        <div class="container">
+            <div class="header">
+                <img src="images/self-image-circle.png" alt="Photo of me, Yanely Ramirez">
+                <h1>Hi, I'm <strong>Yanely</strong>,</h1>
+                <h2>and I <strong>develop</strong> and <strong>design</strong> websites at a Marketing Agency.</h2>
+                <button class="animated fadeInDown button-primary" type="button" name="button" id="scrollButton">See More</button>
+            </div>
 
-	<section id="about">
-		<img src="images/me.svg">
-		<h2>Who am I?</h2>
-		<p>I am an open-minded and ambitious individual who strives for greatness. My creativity and passion carry through to my work even in a fast-paced environment. I work well with others, but can also balance myself when working individually.</p>
-	</section>
-	<section id="skills">
-		<h2>Skills</h2>
-		<div>
-      <span>NodeJS</span>
-			<span>Sass</span>
-			<span>jQuery</span>
-			<span>Bootstrap</span>
-			<span>JSON</span>
-			<span>MySQL</span>
-			<span>MongoDB</span>
-			<span>Rally</span>
-			<span>SDL Tridion</span>
-			<span>NodeJS</span>
-      <span>Python</span>
-      <span>PHP</span>
-			<span>XML</span>
-			<span>APIs</span>
-			<span>Gigya</span>
-			<span>Git</span>
-			<span>React Native</span>
-      <span>Adobe Illustrator</span>
-      <span>Adobe Photoshop</span>
-      <span>Adobe Dreamweaver</span>
-      <span>Adobe Premiere Pro</span>
-      <span>SVG's</span>
-		</div>
-	</section>
-	<section id="experience">
-		<h2>Experience</h2>
-    <div class="container-fluid">
-      <article class="col-md-6">
-  			<h4>Think Agency<br /><small>Jr. UI Developer (present)</small></h4>
-  			<ul>
-  				<li>Created live pages out of mockups.</li>
-  				<li>Worked in a team to complete hard deadlines.</li>
-          <li>Gained knowledge from a wide exposure to different frameworks.</li>
-          <li>Completed tasks that involved both the front-end and back-end.</li>
-  			</ul>
-  		</article>
-      <article class="col-md-6">
-  			<!-- <img src="images/universal.png"> -->
-  			<h4>Universal Studios Orlando <br /><small>IT Solutions Delivery Intern</small></h4>
-  			<ul>
-  				<li>Worked alongside Sr. developers analyzing code (C++, .NET)</li>
-  				<li>Used the Agile methodology to work in a team environment</li>
-  				<li>Worked with e-commerce on a complex project</li>
-  				<li>Worked hands-on with advanced tools such as SDL Tridion, BitBucket, and Gigya</li>
-  			</ul>
-  		</article>
-    </div>
-		<div class="container-fluid">
-      <article class="col-md-6">
-  			<h4>&quot;Choral&quot;<br /><small>For artists to collaborate together through music or poetry</small></h4>
-  			<ul>
-  				<li>Technologies: MongoDB, Express, AngularJS, NodeJS, Auth0</li>
-  				<li>Timeline: 3 months</li>
-  			</ul>
-  		</article>
-      <article class="col-md-6">
-  			<h4>&quot;Light It Up!&quot; <br /><small>LED's changed color based on distance from lights</small></h4>
-  			<ul>
-  				<li>Technologies: Arduino, C++, NeoPixels</li>
-  				<li>Timeline: 1 month</li>
-  			</ul>
-  		</article>
-		</div>
-	</section>
-	<section id="work">
-    <div class="container-fluid">
-      <article class="inner col-md-6">
-  			<h2>Speedy Delivery Service</h2>
-  			<p>App that allows you to choose what you'd like to have picked up from the grocery, when, and where. It is based upon a foundation of two young ladies. <a href="https://marvelapp.com/fdc78a" target="_blank">Get the full effect.</a></p>
-  			<span>Photoshop</span><br>
-        <a href="images/my_mocks_1.png" data-lightbox="phone" data-title="iPhone mock-up"><img class="phone" src="images/my_mocks_1.png"></a>
-  		</article>
-      <article class="inner col-md-6">
-        <h2>&quot;Choral&quot;</h2>
-        <p>For artists &amp; musicians to come together and collaborate through lyrics. Choral allows for people to upvote lyrics that they like along with posting lyrics and a mood to share with others.</p>
-        <span>MongoDB</span> |
-        <span>ExpressJS</span> |
-        <span>AngularJS</span> |
-        <span>NodeJS</span>
-        <a data-lightbox="screen" data-title="Desktop version of Choral" href="images/screen.png"><img class="screen" src="images/screen.png"></a>
-      </article>
-    </div>
-    <div class="container-fluid">
-      <article class="inner col-md-6">
-  			<h2>Playing Cards</h2>
-  			<p>The playing card showcased here is the 7 of spades. The back of the card has my initials and at-the-time branding. I definitely wanted to bring a geometric math feel to it.</p>
-  			<span>Illustrator</span><br>
-  		  <a href="images/front.png" data-lightbox="cards" data-title="Font of Card"><img class="cards" src="images/front.png"></a>
-  		  <a href="images/back.png" data-lightbox="cards" data-title="Back of Card"><img class="cards" src="images/back.png"></a>
-      </article>
-      <article class="inner col-md-6">
-  			<h2>Inspiring Quote</h2>
-  			<p>The quote showcased here is "Do small things with great love". I chose this quote as it is one of my favorites and one that I live by. It is said by one an inspiring model for myself, Mother Teresa.</p>
-  			<span>Illustrator</span><br>
-        <a data-lightbox="poster" data-title="Mother Teresa inspired art poster." href="images/Ramirez_Yanely_ArtPoster.png"><img class="quote" src="images/Ramirez_Yanely_ArtPoster.png"></a>
-  		</article>
-    </div>
-	</section>
-	<section id="contact">
-		<h2>Contact Me!</h2>
-		<p>By now, you've seen just a bit of who I am, if you'd like to talk more, <a href="mailto:hello@yanelyramirez.com?subject=Hi%20There!">email me</a>!</p>
-		<p>Alternatively, if you'd like to work together on a project or anything cool, feel free to email, tweet, or contact me via Linked In, let's code!</p>
-		<a href="https://twitter.com/yxnely" target="_blank"><img id="icon" src="images/twitter.svg"></a>
-		<a href="https://github.com/yxnely" target="_blank"><img id="icon" src="images/github.svg"></a>
-		<a href="https://www.linkedin.com/in/yanelyrmz"><img id="icon" src="images/linked.svg"></a>
-	</section>
+            <div class="row" id="web">
+                <div class="twelve columns">
+                    <h2>Web</h2>
+                    <div class="grid">
+                        <div>
+                            <h3 class="title">Choral</h3>
+                            <p class="description">For artists &amp; musicians to come together and collaborate through lyrics. Choral allows for people to upvote lyrics that they like along with posting lyrics and a mood to share with others.</p>
+                            <a data-lightbox="screen" data-title="Desktop version of Choral" href="images/screen.png"><img class="screen" src="images/screen.png"></a>
+                            <div class="tools">
+                                <span>MongoDB</span>
+                                <span>ExpressJS</span>
+                                <span>AngularJS</span>
+                                <span>NodeJS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+            <div class="row" id="graphic">
+                <div class="twelve columns">
+                    <h2>Graphic</h2>
+                    <div class="grid">
+                        <div>
+                            <h3 class="title">Speedy Delivery Service</h3>
+                            <p class="description">App that allows you to choose what you'd like to have picked up from the grocery, when, and where. It is based upon a foundation of two young ladies. Get the full effect.</p>
+                            <a href="images/my_mocks_1.png" data-lightbox="phone" data-title="iPhone mock-up"><img class="phone" src="images/my_mocks_1.png"></a>
+                            <div class="tools">
+                                <span>Photoshop</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="title">Playing Cards</h3>
+                            <p class="description">The playing card showcased here is the 7 of spades. The back of the card has my initials and at-the-time branding. I definitely wanted to bring a geometric math feel to it.</p>
+                            <a href="images/front.png" data-lightbox="cards" data-title="Font of Card"><img class="cards" src="images/front.png"></a>
+                            <div class="tools">
+                                <span>Illustrator</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="title">Inspiring Quote</h3>
+                            <p class="description">The quote showcased here is "Do small things with great love". I chose this quote as it is one of my favorites and one that I live by. It is said by one an inspiring model for myself, Mother Teresa.</p>
+                            <a data-lightbox="poster" data-title="Mother Teresa inspired art poster." href="images/Ramirez_Yanely_ArtPoster.png"><img class="quote" src="images/Ramirez_Yanely_ArtPoster.png"></a>
+                            <div class="tools">
+                                <span>Illustrator</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script type="text/javascript" src="scripts/lightbox.min.js"></script>
-	<script type="text/javascript" src="scripts/typed.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-	<script type="text/javascript" src="scripts/app.js"></script>
+	<script type="text/javascript" src="scripts/main.js"></script>
 </body>
 </html>

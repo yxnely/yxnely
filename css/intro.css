@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500|Work+Sans:300,600");
+body {
+  background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/lightpaperfibers.png");
+  font-family: 'Work Sans', 'Georgia', 'Times New Roman';
+  color: #222222;
+  margin: 0;
+  height: 100vh;
+  width: 100vw; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold; }
+
+button {
+  font-size: 1.5rem; }
+  button[class$='primary'] {
+    margin: 70px auto 0;
+    display: block; }
+
+menu {
+  position: relative; }
+
+.navigation-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  max-width: 200px;
+  padding: 20px 0 20px 20px;
+  z-index: 2; }
+  .navigation-container .fa-bars {
+    cursor: pointer;
+    padding: 5px 7px;
+    color: white;
+    border-radius: 1px;
+    background-color: rgba(230, 100, 104, 0.8); }
+  .navigation-container nav {
+    display: none; }
+  .navigation-container.active {
+    color: #FFFFFF;
+    background-color: rgba(230, 100, 104, 0.8);
+    height: 100%; }
+    .navigation-container.active .fa-bars {
+      background-color: transparent; }
+  .navigation-container a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 2rem;
+    margin: 10px 0 5px;
+    font-weight: 600; }
+
+.header {
+  height: 100vh; }
+  .header img {
+    max-width: 175px;
+    width: 100%;
+    margin: 30px auto 10px;
+    display: block; }
+  .header strong {
+    color: #E66468; }
+
+.container img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain; }
+.container #web {
+  margin-bottom: 50px; }
+.container .tools span {
+  padding: 3px 6px;
+  display: inline-block;
+  margin-bottom: 5px;
+  background-color: #E66468;
+  border-radius: 3px;
+  color: white;
+  font-size: 1.3rem; }
+
+.grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+  .grid > div {
+    width: 100%;
+    margin-bottom: 20px; }
+
+@media screen and (min-width: 1001px) {
+  .grid > div {
+    width: calc(32% - 10px); } }
+@media screen and (min-width: 651px) and (max-width: 1000px) {
+  .grid {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+    .grid > div {
+      width: calc(49% - 10px); } }
+@media screen and (min-width: 651px) {
+  .navigation-container.active .fa-bars,
+  .navigation-container .fa-bars {
+    padding: 0;
+    color: #222222;
+    background-color: transparent; }
+  .navigation-container.active .fa-bars {
+    color: #FFFFFF; }
+
+  .header {
+    margin-top: 0; }
+    .header img {
+      max-width: 250px; } }
+@media screen and (max-width: 650px) {
+  .grid {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; } }
+
+/*# sourceMappingURL=intro.css.map */
