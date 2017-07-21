@@ -79,7 +79,10 @@ menu {
   display: flex;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-  justify-content: space-between; }
+  justify-content: space-between;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end; }
   .grid > div {
     width: 100%;
     margin-bottom: 20px; }
