@@ -1,114 +1,87 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Yanely Ramirez | Web Developer</title>
-	<link rel="stylesheet" type="text/css" href="css/normalize.css">
-	<link rel="stylesheet" type="text/css" href="css/animate.css">
-	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="css/lightbox.min.css">
-    <link rel="stylesheet" type="text/css" href="css/reset.css">
-    <link rel="stylesheet" type="text/css" href="css/skeleton.css">
-	<link rel="stylesheet" type="text/css" href="css/intro.css">
-	<link rel="icon" type="image/png" href="images/favicon.png" sizes="16x16">
-</head>
-<body>
-    <main>
-        <div id="navigation" class="container navigation-container">
-            <i class="fa fa-bars fa-2x" id="menu" aria-hidden="true"></i>
-            <nav class="row fadeIn animated">
-                <a class="twelve columns" href="#">Home</a>
-                <a class="twelve columns" href="#web">Work</a>
-                <!-- <a class="twelve columns" href="#">Blog</a> -->
-            </nav>
-        </div>
-        <div class="container">
-            <div class="header">
-                <img src="images/self-image-circle.png" alt="Photo of me, Yanely Ramirez">
-                <h1>Hi, I'm <strong>Yanely</strong>,</h1>
-                <h2>and I <strong>develop</strong> and <strong>design</strong> websites.</h2>
-                <button class="animated fadeInDown button-primary" type="button" name="button" id="scrollButton">See More</button>
-            </div>
-
-            <div class="row" id="web">
-                <div class="twelve columns">
-                    <h2>Web</h2>
-                    <div class="grid">
-                        <div>
-                            <h3 class="title">Choral</h3>
-                            <p class="description">For artists &amp; musicians to come together and collaborate through lyrics. Choral allows for people to upvote lyrics that they like along with posting lyrics and a mood to share with others.</p>
-                            <a data-lightbox="screen" data-title="Desktop - 'Choral'" href="images/screen.png"><img class="screen" src="images/screen.png"></a>
-                            <div class="tools">
-                                <span>MongoDB</span>
-                                <span>ExpressJS</span>
-                                <span>AngularJS</span>
-                                <span>NodeJS</span>
-                            </div>
-                        </div>
-                        <div>
-                            <h3 class="title">Unforgettable Names</h3>
-                            <p class="description">Finding a name for your beautiful bundle of joy has never been easier! With a random search by the choice of gender, you'll be sure to find an unforgettable name that you and your spouse will love.</p>
-                            <a data-lightbox="names" data-title="Desktop - 'Unforgettable Names'" href="images/names-proj.jpg"><img class="names" src="images/names-proj.jpg"></a>
-                            <div class="tools">
-                                <span>Python</span>
-                                <span>MySQL</span>
-                                <span>Flask</span>
-                                <span>API</span>
-                            </div>
-                        </div>
-                        <div>
-                            <h3 class="title">Bill Break</h3>
-                            <p class="description">The easiest way to split the bills with your roommates! Join now and watch as your troubles fade away using our multi-account feature.</p>
-                            <a data-lightbox="bills" data-title="Desktop - 'Bill Break'" href="images/BillBreak_Template-01.png"><img class="bills" src="images/BillBreak_Template-01.png"></a>
-                            <div class="tools">
-                                <span>PHP</span>
-                                <span>Blade</span>
-                                <span>SASS</span>
-                                <span>Gulp</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row" id="graphic">
-                <div class="twelve columns">
-                    <h2>Graphic</h2>
-                    <div class="grid">
-                        <div>
-                            <h3 class="title">Speedy Delivery Service</h3>
-                            <p class="description">App that allows you to choose what you'd like to have picked up from the grocery, when, and where. It is based upon a foundation of two young ladies. Get the full effect.</p>
-                            <a href="images/my_mocks_1.png" data-lightbox="phone" data-title="iPhone mock-up"><img class="phone" src="images/my_mocks_1.png"></a>
-                            <div class="tools">
-                                <span>Photoshop</span>
-                            </div>
-                        </div>
-                        <div>
-                            <h3 class="title">Playing Cards</h3>
-                            <p class="description">The playing card showcased here is the 7 of spades. The back of the card has my initials and at-the-time branding. I definitely wanted to bring a geometric math feel to it.</p>
-                            <a href="images/front.png" data-lightbox="cards" data-title="Font of Card"><img class="cards" src="images/front.png"></a>
-                            <div class="tools">
-                                <span>Illustrator</span>
-                            </div>
-                        </div>
-                        <div>
-                            <h3 class="title">Inspiring Quote</h3>
-                            <p class="description">The quote showcased here is "Do small things with great love". I chose this quote as it is one of my favorites and one that I live by. It is said by one an inspiring model for myself, Mother Teresa.</p>
-                            <a data-lightbox="poster" data-title="Mother Teresa inspired art poster." href="images/Ramirez_Yanely_ArtPoster.png"><img class="quote" src="images/Ramirez_Yanely_ArtPoster.png"></a>
-                            <div class="tools">
-                                <span>Illustrator</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
-
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Yanely Ramirez | Web Developer</title>
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="vendor/animate.css">
+		<link rel="stylesheet" type="text/css" href="vendor/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="vendor/lightbox.min.css">
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="stylesheet" type="text/css" href="vendor/skeleton.css">
+		<link rel="stylesheet" type="text/css" href="css/intro.css">
+		<link rel="icon" type="image/png" href="images/favicon.png" sizes="16x16">
+	</head>
+	<body>
+		<main>
+			<div id="output" class="header">
+				<h1>Yanely Ramirez</h1>
+				<nav>
+					<ul>
+						<li class='item' data-section="projects">Projects</li>
+						<li class='item' data-section="experience">Experience</li>
+						<li>Resume</li>
+					</ul>
+				</nav>
+			</div>
+			<section id="projects" class="grid grid-tri section">
+				<h2 class='title'>Projects</h2>
+				<div>
+					<a href="#"><img data-project="choral" src="images/blocks/choral-grey.png"></a>
+				</div>
+				<div>
+					<a href="projects/speedy.html"><img data-project="speedy" src="images/blocks/speedy-grey.png"></a>
+				</div>
+				<div>
+					<a href="projects/gemini.html"><img data-project="gemini" src="images/blocks/gemini-grey.png"></a>
+				</div>
+				<div>
+					<a href="#"><img data-project="car" src="images/blocks/car-grey.png"></a>
+				</div>
+				<div>
+					<img data-project="kolea" src="images/blocks/kolea-grey.png">
+				</div>
+				<div>
+					<a href='projects/unforgettable.html'><img style="background: #FBFBFB;" data-project="elephant" src="images/blocks/elephant-grey.png"></a>
+					<!-- <div></div> -->
+				</div>
+			</section>
+			<section id="experience" class="section">
+				<h3 class="title">Experience</h3>
+				<div class="work">
+					<div>
+						<div class="work-logo"><img src="images/think-logo.png"></div>
+						<br>
+						<h3 class="sm-title">Th!nk Agency (Current)</h3>
+						<p><b>Position: </b>UI Developer</p>
+						<ul>
+							<li>Created live pages out of mockups.</li>
+							<li>Aided in creating designs from brand guidelines.</li>
+							<li>Worked in a team to complete hard deadlines.</li>
+							<li>Gained knowledge from a wide exposure to different frameworks.</li>
+							<li>Completed tasks that involved both the front-end and back-end.</li>
+						</ul>
+					</div>
+					<div>
+						<div class="work-logo"><img src="images/universal.png"></div>
+						<br>
+						<h3 class="sm-title">Universal Studios Orlando</h3>
+						<p><b>Position: </b>IT Solutions Delivery Intern</p>
+						<ul>
+							<li>Worked alongside Sr. developers analyzing code (C++, .NET)</li>
+							<li>Used the Agile methodology to work in a team environment</li>
+							<li>Worked with e-commerce on a complex project</li>
+							<li>Worked hands-on with advanced tools such as SDL Tridion, BitBucket, and Gigya</li>
+						</ul>
+					</div>	
+				</div>
+			</section>
+		</main>
+	</body>
+	<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script type="text/javascript" src="scripts/lightbox.min.js"></script>
-	<script type="text/javascript" src="scripts/main.js"></script>
-</body>
+	<script src="scripts/main.js"></script>
 </html>

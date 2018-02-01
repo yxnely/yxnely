@@ -1,51 +1,44 @@
-function toggleMenu (e) {
-    var navContainer = document.getElementById('navigation');
+/*
+ * Main Script - Yanely Ramirez
+*/
+
+const menuItems = document.querySelectorAll('.item');
+const allMenuItems = Object.values(menuItems);
+
+const handleColor = e => {
     var target = e.target;
-    var nav = target.nextElementSibling;
+    var project = target.dataset.project;
+    var path = 'images/blocks/';
 
-    if (nav.style.display == 'none' || nav.style.display == '') {
-        navContainer.classList.add('active');
-
-        $(navContainer).animate({
-            width: '75%'
-        }, 500);
-
-        nav.style.display = 'block';
-    } else if (nav.style.display == 'block') {
-        $(navContainer).animate({
-            width: '0px'
-        }, {
-            done: function () {
-                navContainer.classList.remove('active');
-            }
-        }, 500);
-
-        nav.style.display = 'none';
-    }
+    target.src = path + project + '.png';
 }
 
-function scrollAction () {
-    var target = $('#web');
-       if (target.length) {
-           var top = target.offset().top;
-           $('html,body').animate({scrollTop: top}, 1000);
-           return false;
-       }
+const handleGreyscale = e => {
+    var target = e.target;
+    var project = target.dataset.project;
+    var path = 'images/blocks/';
+
+    target.src = path + project + '-grey.png';
 }
 
-function handleMenu () {
-    $('nav').fadeOut();
-    $('.navigation-container').removeClass('active');
+
+const init = () =>{
+    var gridBlocks = $('.grid-tri img');
+
+    gridBlocks
+        .mouseenter(handleColor)
+        .mouseleave(handleGreyscale);
 }
 
-function init () {
-    var menu = document.getElementById('menu');
-    var button = document.getElementById('scrollButton');
-    var link = $('nav > a');
+const scrollToItem = e => {
+    const section = e.target.dataset.section;
+    const target = document.getElementById(section);
 
-    menu.addEventListener('click', toggleMenu);
-    button.addEventListener('click', scrollAction);
-    link.off().on('click', handleMenu);
+    $('html, body').animate({
+        scrollTop: $(target).offset().top - 60
+    }, 1000);
 }
+
+allMenuItems.forEach(x => x.addEventListener('click', scrollToItem));
 
 $('document').ready(init);
