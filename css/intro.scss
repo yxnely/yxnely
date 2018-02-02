@@ -63,6 +63,10 @@ nav {
     li {
         display: inline;
 
+        &:hover {
+            cursor: pointer;
+        }
+
         &:not(:last-of-type) {
             margin-right: 10px;
 
@@ -76,6 +80,10 @@ nav {
     a {
         text-decoration: none;
         color: #222222;
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 }
 

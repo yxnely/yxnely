@@ -65,6 +65,8 @@ nav {
   margin: 0 auto; }
   nav li {
     display: inline; }
+    nav li:hover {
+      cursor: pointer; }
     nav li:not(:last-of-type) {
       margin-right: 10px; }
       nav li:not(:last-of-type):after {
@@ -73,6 +75,8 @@ nav {
   nav a {
     text-decoration: none;
     color: #222222; }
+    nav a:hover {
+      cursor: pointer; }
 
 main {
   background: #FCFCFC;
