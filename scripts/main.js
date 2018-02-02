@@ -35,7 +35,7 @@ const scrollToItem = e => {
     const target = document.getElementById(section);
 
     $('html, body').animate({
-        scrollTop: $(target).offset().top - 60
+        scrollTop: $(target).offset().top - 170
     }, 1000);
 }
 
