@@ -1,36 +1,44 @@
-@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,700|Lato:300,400');
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:500,600|Lato:300,400');
+
+:root {
+    font-size: 16px;
+}
 
 body {
     background: #FCFCFC;  /* fallback for old browsers */
     font-family: 'Lato', 'Georgia', 'Times New Roman';
     color: #222222;
     margin: 0 !important;
-    height:100vh;
-    width:100vw;
-    font-size: 16px;
+    height: 100vh;
+    width: 100vw;
     font-weight: 300;
+    font-size: 1.2rem;
 
     * {
         box-sizing: border-box;
     }
 }
 
-a {
-    cursor: pointer;
-}
+a { cursor: pointer; }
 
 h1, h2, h3, h4, h5, h6 {
-    font-weight: bold;
+    font-weight: 600;
     letter-spacing: 1px;
     font-family: 'Work Sans', 'Georgia', 'Times New Roman';
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
 }
+
+h1 { font-size: 3rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.3rem; }
+h5 { font-size: 1rem; }
 
 em { font-style: italic; }
 b { font-weight: bold; }
 
 button {
-    font-size: 1.5rem;
-
     &[class$='primary'] {
         margin: 70px auto 0;
         display: block;
@@ -43,6 +51,8 @@ button {
     width: 100%;
     z-index: 100;
     background: #FCFCFC;
+
+    ul { margin-bottom: 20px }
 }
 
 nav {
@@ -76,7 +86,6 @@ main {
 
 h1 {
     text-align: center;
-    font-size: 3.5rem;
     padding: 20px 0 0 0;
 }
 
@@ -100,7 +109,7 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    font-size: 1.4rem;
+    font-size: 1.1rem;
 
     > div {
         width: 45%;
@@ -174,13 +183,15 @@ h1 {
         margin-bottom: 1.5em;
     }
 
+    p {
+        margin-bottom: 1rem;
+    }
+
     h2 {
-        font-size: 2.3rem;
         margin: 0 0 10px 0;
     }
 
     h3 {
-        font-size: 1.8rem;
         margin: 0 0 5px 0;
     }
 }
@@ -211,6 +222,8 @@ h1 {
 
 .section {
     margin-bottom: 20px;
+
+    p { margin-bottom: 1rem; }
 }
 
 .cover {
@@ -231,6 +244,14 @@ h1 {
 .shadow {
     -webkit-box-shadow: 0 3px 6px rgba(0,0,0,0.06), 0 3px 6px rgba(0,0,0,0.13);
     box-shadow: 0 3px 6px rgba(0,0,0,0.06), 0 3px 6px rgba(0,0,0,0.13);
+}
+
+img.small {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 10px;
 }
 
 .marvel {

@@ -1,4 +1,7 @@
-@import url("https://fonts.googleapis.com/css?family=Work+Sans:400,700|Lato:300,400");
+@import url("https://fonts.googleapis.com/css?family=Work+Sans:500,600|Lato:300,400");
+:root {
+  font-size: 16px; }
+
 body {
   background: #FCFCFC;
   /* fallback for old browsers */
@@ -7,8 +10,8 @@ body {
   margin: 0 !important;
   height: 100vh;
   width: 100vw;
-  font-size: 16px;
-  font-weight: 300; }
+  font-weight: 300;
+  font-size: 1.2rem; }
   body * {
     box-sizing: border-box; }
 
@@ -16,9 +19,26 @@ a {
   cursor: pointer; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: bold;
+  font-weight: 600;
   letter-spacing: 1px;
-  font-family: 'Work Sans', 'Georgia', 'Times New Roman'; }
+  font-family: 'Work Sans', 'Georgia', 'Times New Roman';
+  font-size: 1.5rem;
+  margin-bottom: 1rem; }
+
+h1 {
+  font-size: 3rem; }
+
+h2 {
+  font-size: 1.8rem; }
+
+h3 {
+  font-size: 1.5rem; }
+
+h4 {
+  font-size: 1.3rem; }
+
+h5 {
+  font-size: 1rem; }
 
 em {
   font-style: italic; }
@@ -26,11 +46,9 @@ em {
 b {
   font-weight: bold; }
 
-button {
-  font-size: 1.5rem; }
-  button[class$='primary'] {
-    margin: 70px auto 0;
-    display: block; }
+button[class$='primary'] {
+  margin: 70px auto 0;
+  display: block; }
 
 .header {
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.26);
@@ -38,6 +56,8 @@ button {
   width: 100%;
   z-index: 100;
   background: #FCFCFC; }
+  .header ul {
+    margin-bottom: 20px; }
 
 nav {
   text-align: center;
@@ -60,7 +80,6 @@ main {
 
 h1 {
   text-align: center;
-  font-size: 3.5rem;
   padding: 20px 0 0 0; }
 
 .title {
@@ -81,7 +100,7 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  font-size: 1.4rem; }
+  font-size: 1.1rem; }
   .work > div {
     width: 45%; }
   .work-logo {
@@ -134,11 +153,11 @@ h1 {
     border-bottom: 1px solid #ECECEC;
     padding-bottom: 1.5em;
     margin-bottom: 1.5em; }
+  .overview p {
+    margin-bottom: 1rem; }
   .overview h2 {
-    font-size: 2.3rem;
     margin: 0 0 10px 0; }
   .overview h3 {
-    font-size: 1.8rem;
     margin: 0 0 5px 0; }
 
 .flex-container {
@@ -160,6 +179,8 @@ h1 {
 
 .section {
   margin-bottom: 20px; }
+  .section p {
+    margin-bottom: 1rem; }
 
 .cover-container {
   text-align: center; }
@@ -174,6 +195,13 @@ h1 {
 .shadow {
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.06), 0 3px 6px rgba(0, 0, 0, 0.13);
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.06), 0 3px 6px rgba(0, 0, 0, 0.13); }
+
+img.small {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 10px; }
 
 .marvel {
   width: 100%;
