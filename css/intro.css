@@ -203,6 +203,11 @@ img.small {
   display: block;
   margin-bottom: 10px; }
 
+span.small-text {
+  text-transform: uppercase;
+  font-size: .9rem;
+  font-weight: 600; }
+
 .marvel {
   width: 100%;
   height: 600px; }
