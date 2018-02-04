@@ -300,6 +300,19 @@ span.small-text {
     text-transform: uppercase;
 }
 
+footer {
+    a {
+        max-width: 40px;
+        max-height: 40px;
+        display: inline-block;
+    }
+
+    img {
+        width: 100%;
+        object-fit: contain;
+    }
+}
+
 @media all and (max-width: 850px) {
     .grid {
         padding-left: 2%;
