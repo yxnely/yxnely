@@ -2,6 +2,10 @@
 :root {
   font-size: 16px; }
 
+html,
+body {
+  overflow-x: hidden; }
+
 body {
   background: #FCFCFC;
   /* fallback for old browsers */
@@ -55,7 +59,8 @@ button[class$='primary'] {
   position: fixed;
   width: 100%;
   z-index: 100;
-  background: #FCFCFC; }
+  background: #FCFCFC;
+  padding: 0 10px; }
   .header ul {
     margin-bottom: 20px; }
 
