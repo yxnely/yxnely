@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Work+Sans:500,600|Lato:300,400");
+@import url("https://fonts.googleapis.com/css?family=Roboto:500,600|Lato:300,400");
 :root {
   font-size: 16px; }
 
@@ -25,7 +25,7 @@ a {
 h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   letter-spacing: 1px;
-  font-family: 'Work Sans', 'Georgia', 'Times New Roman';
+  font-family: 'Roboto', 'Georgia', 'Times New Roman';
   font-size: 1.5rem;
   margin-bottom: 1rem; }
 
@@ -33,10 +33,10 @@ h1 {
   font-size: 3rem; }
 
 h2 {
-  font-size: 1.8rem; }
+  font-size: 1.9rem; }
 
 h3 {
-  font-size: 1.5rem; }
+  font-size: 1.4rem; }
 
 h4 {
   font-size: 1.3rem; }
