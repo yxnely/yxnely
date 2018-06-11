@@ -8,10 +8,8 @@
 		<link rel="stylesheet" type="text/css" href="../css/normalize.css">
 		<link rel="stylesheet" type="text/css" href="../vendor/animate.css">
 		<link rel="stylesheet" type="text/css" href="../vendor/font-awesome.min.css">
-		<link rel="stylesheet" type="text/css" href="../vendor/lightbox.min.css">
 		<link rel="stylesheet" type="text/css" href="../css/reset.css">
-		<link rel="stylesheet" type="text/css" href="../vendor/skeleton.css">
-		<link rel="stylesheet" type="text/css" href="../css/intro.css">
+		<link rel="stylesheet" type="text/css" href="../css/redesign.css">
 		<link rel="icon" type="image/png" href="../images/favicon.png" sizes="16x16">
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-113480687-1"></script>
@@ -24,30 +22,52 @@
 		</script>
 	</head>
 	<body>
-		<main>
-			<br>
+		<main class="project">
+			
+			<i class="fa fa-bars"></i>
 			<nav>
 				<ul>
-					<li><a href="../index.html">&#8592; Back to Home</a></li>
+					<li><a class='item' href="https://www.yanelyramirez.com">Home</a></li>
+					<li><a class='item' href="../work.html">Work</a></li>
+					<li><a class='item' href="../experience.html">Experience</a></li>
+					<li><a class='item' href="../aboutme.html">About Me</a></li>
+					<li><a class='item' href="../images/Ramirez_Yanely_Resume.pdf" target="_blank">Resume</a></li>
 				</ul>
 			</nav>
-			<div class="cover-container">
-				<img src="../images/headers/unforgettable-header.png" class="cover-image">
-			</div>
+
+			<div class="project-header project-unforgettable" style="background-image:url(../images/headers/unforgettable-header.png)"></div>
+
 			<span class="date">September 2015</span>
-			<section class="overview">
-				<h2>Summary:</h2>
-					<div>
-						<h3>Scenario / Challenge:</h3>
-						<p>251 babies are born worldwide per minute. Did you catch that? Two hundred and fifty one! That's 502 parents that will have (hopefully) already chosen a name, but how? Well, they may tell you that they read a book, an article, or simply chosen a name already in the family. Whatever the case may be, these parents will tell you that they had a difficult time choosing the right fit, because afterall, a name is <em>forever</em>, right? But, no worries! Unforgettable names is here to help!</p>
-						<h3>Solution:</h3>
-						<p>Unforgettable Names allows you to get hundreds of names just by choosing a gender. With the random generator, you can get names all day long based on a 'male' or 'female' preference.</p>
-						<h3>Technologies Used:</h3>
-						<p>Python, Flask, MySQL, API Integration, CSS, HTML</p>
-					</div>
-				<h2>Check it Out:</h2>
-				<iframe class="marvel" src="https://marvelapp.com/6j9a59b/screen/33984264"></iframe>
-			</section>
+	
+			<div class="overview-body wrapper">
+				<section>
+					<h2>Summary:</h2>
+						<div class="body-content">
+							<h3>Scenario / Challenge:</h3>
+							<p>251 babies are born worldwide per minute. Did you catch that? Two hundred and fifty one! That's 502 parents that will have (hopefully) already chosen a name, but how? Well, they may tell you that they read a book, an article, or simply chosen a name already in the family. Whatever the case may be, these parents will tell you that they had a difficult time choosing the right fit, because afterall, a name is <em>forever</em>, right? But, no worries! Unforgettable names is here to help!</p>
+							<h3>Solution:</h3>
+							<p>Unforgettable Names allows you to get hundreds of names just by choosing a gender. With the random generator, you can get names all day long based on a 'male' or 'female' preference.</p>
+							
+						</div>
+					<h3>Check it Out:</h3>
+					<iframe class="marvel" src="https://marvelapp.com/6j9a59b/screen/33984264"></iframe>
+				</section>
+
+				<aside>
+					<h3>Technologies Used:</h3>
+					<p>
+						<span>Python</span><br>
+						<span>Flask</span><br>
+						<span>MySQL</span><br>
+						<span>API Integration</span><br>
+						<span>CSS</span><br>
+						<span>HTML</span>
+					</p>
+				</aside>
+			</div>
 		</main>
 	</body>
+	<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script type="text/javascript" src="../scripts/redesign.js"></script>
 </html>

@@ -24,8 +24,7 @@
 		<link rel="stylesheet" type="text/css" href="../vendor/font-awesome.min.css">
 		<link rel="stylesheet" type="text/css" href="../vendor/lightbox.min.css">
 		<link rel="stylesheet" type="text/css" href="../css/reset.css">
-		<link rel="stylesheet" type="text/css" href="../vendor/skeleton.css">
-		<link rel="stylesheet" type="text/css" href="../css/intro.css">
+		<link rel="stylesheet" type="text/css" href="../css/redesign.css">
 		<link rel="icon" type="image/png" href="../images/favicon.png" sizes="16x16">
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-113480687-1"></script>
@@ -38,40 +37,58 @@
 		</script>
 	</head>
 	<body>
-		<main>
-			<br>
+		<main class="project">
+
+			<i class="fa fa-bars"></i>
 			<nav>
 				<ul>
-					<li><a href="../index.html">&#8592; Back to Home</a></li>
+					<li><a class='item' href="https://www.yanelyramirez.com">Home</a></li>
+					<li><a class='item' href="../work.html">Work</a></li>
+					<li><a class='item' href="../experience.html">Experience</a></li>
+					<li><a class='item' href="../aboutme.html">About Me</a></li>
+					<li><a class='item' href="../images/Ramirez_Yanely_Resume.pdf" target="_blank">Resume</a></li>
 				</ul>
-            </nav>
-            <h2 class="center">Playing Cards</h2>
-			<a href="../images/projects/graphic/playing-cards.png" data-lightbox="playing-cards" data-title="Playing Cards">
-                <img class='small shadow' width="90%" src="../images/projects/graphic/playing-cards.png" />
-            </a>
+			</nav>
+
+			<div class="graphic-wrapper">
+				<h2 class="center">Playing Cards</h2>
+				<a class="photo" href="../images/projects/graphic/playing-cards.png" data-lightbox="playing-cards" data-title="Playing Cards">
+	                <img class='photo shadow' width="90%" src="../images/projects/graphic/playing-cards.png" />
+	            </a>
+            </div>
+
 			<span class="date">October 2015</span>
-			<section class="overview">
-                <h2>Statement:</h2>
+
+			<section class="wrapper">
+                <h2>Statement</h2>
                 <div class="body-content">
                     <p>Playing cards are so fun to make because you have just the right amount of restriction and freedom where you can let out and show yourself through the cards. With these cards, I wanted to keep it simple while also keeping it fun, so fun that I even made a '1' card, fail haha.</p>
                 </div>
             </section>
-            <h2 class="center">Personalized Cards</h2>
-            <a href="../images/projects/graphic/front.png" data-lightbox="personalized-cards" data-title="Front of card">
-                <img class='small shadow' width="90%" src="../images/projects/graphic/front.png" />
-            </a>
-            <a href="../images/projects/graphic/back.png" data-lightbox="personalized-cards" data-title="Back of card">
-                <img class='small shadow' width="90%" src="../images/projects/graphic/back.png" />
-            </a>
-            <section class="overview">
-                <h2>Statement:</h2>
+
+			<div class="graphic-wrapper">
+	            <h2 class="center">Personalized Cards</h2>
+
+	            
+		            <a class="photo" href="../images/projects/graphic/front.png" data-lightbox="personalized-cards" data-title="Front of card">
+		                <img class='photo shadow' width="90%" src="../images/projects/graphic/front.png" />
+		            </a>
+		            <a class="photo" href="../images/projects/graphic/back.png" data-lightbox="personalized-cards" data-title="Back of card">
+		                <img class='photo shadow' width="90%" src="../images/projects/graphic/back.png" />
+		            </a>
+	            
+	        </div>
+
+            <section class="wrapper">
+                <h2>Statement</h2>
                 <div class="body-content">
                     <p>Along with the playing cards, I decided to add a little bit more of my own twist and create my own personalized cards. I thought this concept was very cool because I even saw people printing theirs out and actually use them physically and I thought that was pretty cool. My cards are reflecting the art deco era. It is mainly influenced by Noël Fontanet. Noël was born in Geneva and worked as a caricaturist and graphic designer. Fontanet drew caricaturists for newspapers and also designed political posters. Fontanet is someone who really thought outside of the box and that is always a number 1 thing for me. For my colors, I chose green and black which were derived from my personal branding that I've been working on previously (several iterations ago). I used a font called "Adamas Regular" which gives a geometric shape feel. Also, for the back of my cards I used a thick border to better bring that blue and black feel. The spades on the front of the card also have a geometric feel to bring it all together from the front to the back.</p>
                 </div>
             </section>
         </main>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <script type="text/javascript" src="../scripts/lightbox.min.js"></script>
-        <script type="text/javascript" src="../scripts/main.js"></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script type="text/javascript" src="../scripts/lightbox.min.js"></script>
+		<script src="../scripts/redesign.js"></script>
 	</body>
 </html>
