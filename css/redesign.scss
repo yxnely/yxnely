@@ -474,21 +474,21 @@ section {
     box-shadow: 0 3px 6px rgba(0,0,0,0.06), 0 3px 6px rgba(0,0,0,0.13);
 }
 
+.date {
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 1rem 0;
+    width: 100%;
+}
+
 .project {
     &-header {
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
         height: 300px;
-    }
-
-    .date {
-        display: block;
-        font-weight: bold;
-        text-align: center;
-        text-transform: uppercase;
-        margin: 1rem 0;
-        width: 100%;
     }
 
     .photo {
