@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,700|Open+Sans:400,600,700");
 :root {
   font-size: 16px;
-  --main-text-color: #222222; }
+  --main-text-color: #222222;
+  --main-link-color: #8CABBE; }
 
 html,
 body {
@@ -313,44 +314,89 @@ section h3 {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   -ms-flex-pack: distribute;
-  justify-content: space-around;
+  justify-content: space-between;
   max-width: 1440px;
   padding: 0 3rem;
   width: 100%; }
-  .grid div {
+  .grid > div {
     position: relative;
     width: 32%;
     margin-bottom: 15px;
-    max-height: 270px;
     border: 1px solid #E5E5E5; }
-    .grid div:hover {
+  .grid h3 {
+    font-size: 2rem;
+    width: 99%;
+    margin: 1rem 0; }
+  .grid .project {
+    max-height: 270px; }
+    .grid .project:hover {
       cursor: pointer; }
-    .grid div > div {
+    .grid .project > div {
       position: absolute;
       height: 100%;
       width: 100%;
       background: #222222;
       top: 0;
       opacity: .4; }
-  .grid h3 {
-    font-size: 2rem;
-    width: 99%;
-    margin: 1rem 0; }
-  .grid img {
-    background: #FFFFFF;
-    width: 100%;
-    height: 100%;
-    -o-object-fit: contain;
-    object-fit: contain;
-    -o-object-position: center;
-    object-position: center; }
+    .grid .project img {
+      background: #FFFFFF;
+      width: 100%;
+      height: 100%;
+      -o-object-fit: contain;
+      object-fit: contain;
+      -o-object-position: center;
+      object-position: center; }
+  .grid .mini-project {
+    padding: 1rem;
+    flex-grow: 1; }
+    .grid .mini-project h4 {
+      text-align: center;
+      margin: 0; }
+    .grid .mini-project .summary {
+      padding: 1.5rem 0 1rem;
+      line-height: 1.3rem; }
+    .grid .mini-project__links {
+      text-align: center;
+      display: flex; }
+      .grid .mini-project__links a {
+        border: 1px solid var(--main-link-color);
+        border-radius: 3px;
+        color: var(--main-link-color);
+        display: inline-block;
+        flex-grow: 1;
+        font-weight: bold;
+        margin-top: 1.5rem;
+        padding: .5rem 1rem;
+        text-decoration: none; }
+        .grid .mini-project__links a:hover {
+          background-color: var(--main-link-color);
+          color: white; }
+      .grid .mini-project__links .main {
+        margin-right: 1rem; }
+    .grid .mini-project .tech-stack {
+      display: flex;
+      max-width: 300px;
+      justify-content: space-between;
+      width: 100%;
+      margin: 0 auto; }
+    .grid .mini-project img {
+      width: calc(100%/5);
+      object-fit: contain;
+      max-height: 50px; }
+  @media screen and (min-width: 851px) {
+    .grid .mini-project:nth-of-type(even) {
+      margin-left: 1rem; } }
+  @media screen and (max-width: 850px) {
+    .grid .mini-project {
+      width: 100%;
+      margin-bottom: 1rem; } }
   @media screen and (max-width: 767px) {
     .grid {
       padding: 0 1rem; }
-      .grid div {
-        width: 47%; } }
+      .grid > div {
+        width: 48%; } }
   @media screen and (max-width: 550px) {
-    .grid div {
+    .grid .project {
       width: 100%; } }
 
 /* ------------- Projects ------------- */

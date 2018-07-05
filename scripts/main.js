@@ -20,7 +20,7 @@ const handleGreyscale = e => {
 
 
 const init = () =>{
-    var gridBlocks = $('.grid-tri img');
+    var gridBlocks = $('.project img');
 
     gridBlocks
         .mouseenter(handleColor)
