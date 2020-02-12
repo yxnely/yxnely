@@ -3,8 +3,8 @@
     font-family: myFirstFont;
     src: url(../fonts/CarneysGalleryDemoVersion.woff); } }
 body {
-  background-color: #DE3C4B;
-  color: #FFF; }
+  background-color: #FFF;
+  color: #DE3C4B; }
 
 h1 {
   font-family: "CarneysGalleryDemoVersion", Arial, Helvetica, sans-serif;
