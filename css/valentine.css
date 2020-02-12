@@ -25,7 +25,7 @@ h2 {
 
 .val-card {
   width: 95%;
-  margin: 0 auto;
+  margin: 0 auto 10rem;
   max-width: 800px;
   text-align: center; }
   .val-card img:first-of-type {
@@ -33,6 +33,11 @@ h2 {
     transform: rotate(-45deg);
     right: 3rem;
     top: 6rem; }
+  .val-card img:nth-of-type(2) {
+    position: relative;
+    transform: rotate(-45deg);
+    bottom: -40rem;
+    right: -2rem; }
   .val-card img.memory {
     max-width: 500px; }
 
