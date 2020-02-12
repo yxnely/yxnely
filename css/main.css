@@ -1,0 +1,25 @@
+.name {
+	max-width: 500px;
+	width: 90%;
+	display: block;
+	margin: 0 auto;
+}
+
+.word-container {
+	width: 90%;
+	max-width: 500px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 1rem auto;
+}
+
+.word { object-fit: contain; }
+
+@media screen and (min-width: 501px) {
+	.word { height: 30px; }
+}
+
+@media screen and (max-width: 500px) {
+	.word { height: 25px; }
+}
