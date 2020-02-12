@@ -1,0 +1,49 @@
+:root {
+	@font-face {
+		font-family: myFirstFont;
+		src: url(../fonts/CarneysGalleryDemoVersion.woff);
+	}
+}
+
+body {
+	background-color: #DE3C4B;
+	color: #FFF;
+}
+
+h1 {
+	font-family: "CarneysGalleryDemoVersion", Arial, Helvetica, sans-serif;
+	line-height: 3rem;
+	font-size: 2rem;
+	text-align: center;
+	margin: 2rem 0 0 0;
+	letter-spacing: .05rem;
+}
+
+h2 {
+	font-family: "CarneysGalleryDemoVersion", Arial, Helvetica, sans-serif;
+	transform: rotate(-90deg);
+	display: inline-block;
+	position: absolute;
+	left: 5rem;
+	top: 30rem;
+	font-size: 2rem;
+}
+
+.val-card {
+	width: 95%;
+	margin: 0 auto;
+	max-width: 800px;
+	text-align: center;
+
+	img:first-of-type {
+		position: relative;
+    transform: rotate(-45deg);
+    right: 3rem;
+    top: 6rem;
+	}
+
+	img.memory {
+		max-width: 500px;
+	}
+	
+}
