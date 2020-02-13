@@ -1,6 +1,9 @@
 const init = () =>{
-	var containerHeight = $('document').height();
-	console.log(containerHeight);
+	const heading = document.getElementById('heading');
+
+	if (heading !== null) {
+		heading.style.height = `${window.innerHeight}px`;
+	}
 }
 
 $('document').ready(init);

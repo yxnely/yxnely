@@ -3,7 +3,8 @@
 
 body {
   background-color: #191919;
-  color: #FC2036; }
+  color: #FC2036;
+  width: 100%; }
 
 h1 {
   font-family: "carneys_gallery_demo_versioRg", "Abril Fatface", Arial, Helvetica, sans-serif;
@@ -11,19 +12,23 @@ h1 {
   font-size: 2rem;
   text-align: center;
   margin: 2rem 0 0 0;
-  letter-spacing: .05rem; }
+  letter-spacing: .05rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 500px; }
 
 h2 {
   font-family: "carneys_gallery_demo_versioRg", Arial, Helvetica, sans-serif;
-  transform: rotate(-90deg);
-  display: inline-block;
-  position: fixed;
-  background-color: rgba(188, 188, 188, 0.5);
+  background-color: rgba(188, 188, 188, 0.1);
   top: 20rem;
   font-size: 2rem;
-  left: -120px;
   z-index: 5;
-  color: #191919; }
+  display: block;
+  position: sticky;
+  top: 0;
+  max-width: 400px;
+  padding: 1rem 1.5rem; }
 
 .val-card {
   margin: 0 auto 10rem;
