@@ -8,7 +8,7 @@
     src: url(../fonts/CarneysGalleryScriptDemoVer.woff); } }
 body {
   background-color: #222;
-  color: #DE3C4B; }
+  color: #FC2036; }
 
 h1 {
   font-family: "CarneysGalleryDemoVersion", Arial, Helvetica, sans-serif;
@@ -29,7 +29,6 @@ h2 {
   left: -260px; }
 
 .val-card {
-  width: 100%;
   margin: 0 auto 10rem;
   max-width: 500px;
   overflow: visible; }
@@ -53,18 +52,22 @@ h2 {
     position: relative; }
   .val-card .caption {
     font-family: "CarneysGalleryScriptDemoVer", Arial, Helvetica, sans-serif;
-    bottom: 60px;
-    right: 40px; }
-  .val-card .location {
-    bottom: 30px;
-    right: 300px; }
+    font-weight: bold;
+    bottom: 60px; }
 
 @media screen and (min-width: 501px) {
-  .val-card > img:first-of-type {
-    transform: rotate(-45deg);
-    width: 250px;
-    right: 15%;
-    bottom: -100px; } }
+  .val-card {
+    width: 100%; }
+    .val-card > img:first-of-type {
+      transform: rotate(-45deg);
+      width: 250px;
+      right: 15%;
+      bottom: -100px; }
+    .val-card .caption {
+      right: 40px; }
+    .val-card .location {
+      bottom: 30px;
+      right: 300px; } }
 @media screen and (max-width: 500px) {
   h1 {
     font-size: 1.5rem;
@@ -72,11 +75,21 @@ h2 {
     line-height: normal; }
 
   .val-card {
-    overflow: hidden; }
+    overflow: hidden;
+    width: 90%; }
     .val-card > img:first-of-type {
       transform: rotate(-45deg);
       width: 240px;
       right: 14%;
-      bottom: -90px; } }
+      bottom: -90px; }
+    .val-card .caption {
+      display: block;
+      text-align: left;
+      padding-left: 15px; }
+    .val-card .location {
+      right: -15px;
+      display: block;
+      text-align: left;
+      bottom: 50px; } }
 
 /*# sourceMappingURL=valentine.css.map */
