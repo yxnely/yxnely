@@ -1,12 +1,16 @@
 :root {
 	@font-face {
-		font-family: myFirstFont;
+		font-family: Carneys;
 		src: url(../fonts/CarneysGalleryDemoVersion.woff);
+	}
+	@font-face {
+		font-family: Carneys;
+		src: url(../fonts/CarneysGalleryScriptDemoVer.woff);
 	}
 }
 
 body {
-	background-color: #FFF;
+	background-color: #222;
 	color: #DE3C4B;
 }
 
@@ -21,36 +25,88 @@ h1 {
 
 h2 {
 	font-family: "CarneysGalleryDemoVersion", Arial, Helvetica, sans-serif;
-	transform: rotate(-90deg);
-	display: inline-block;
-	position: absolute;
-	left: 5rem;
-	top: 30rem;
-	font-size: 2rem;
+    transform: rotate(-90deg);
+    display: inline-block;
+    position: fixed;
+    background-color: white;
+    top: 20rem;
+		font-size: 2rem;
+		left: -260px;
 }
 
 .val-card {
-	width: 95%;
+	width: 100%;
 	margin: 0 auto 10rem;
-	max-width: 800px;
-	text-align: center;
-
-	img:first-of-type {
-		position: relative;
-    transform: rotate(-45deg);
-    right: 3rem;
-    top: 6rem;
+	max-width: 500px;
+	overflow: visible;
+	
+	> div {
+		text-align: center;
 	}
 
-	img:nth-of-type(2) {
+	> img:first-of-type {
 		position: relative;
-    transform: rotate(-45deg);
-    bottom: -40rem;
-    right: -2rem;
+	}
+
+	> img:nth-of-type(2) {
+		position: relative;
+		transform: rotate(-45deg);
+		width: 250px;
+    right: -60%;
+    bottom: 100px;
 	}
 
 	img.memory {
 		max-width: 500px;
+		width: 90%;
+		border: 1rem solid white;
+    border-bottom: 5rem solid white;
+	}
+
+	.caption,
+	.location {
+		position: relative;
+	}
+
+	.caption {
+		font-family: "CarneysGalleryScriptDemoVer", Arial, Helvetica, sans-serif;
+		bottom: 60px;
+		right: 40px;
+	}
+
+	.location {
+		bottom: 30px;
+		right: 300px;
 	}
 	
+}
+
+@media screen and (min-width: 501px) {
+	.val-card {
+		> img:first-of-type {
+			transform: rotate(-45deg);
+			width: 250px;
+			right: 15%;
+			bottom: -100px;
+		}
+	}
+}
+
+@media screen and (max-width: 500px) {
+	h1 {
+		font-size: 1.5rem;
+		letter-spacing: none;
+		line-height: normal;
+	}
+
+	.val-card {
+		overflow: hidden;
+
+		> img:first-of-type {
+			transform: rotate(-45deg);
+			width: 240px;
+			right: 14%;
+			bottom: -90px;
+		}
+	}
 }
