@@ -27,14 +27,12 @@ h1 {
 
 h2 {
 	font-family: "carneys_gallery_demo_versioRg", Arial, Helvetica, sans-serif;
-	background-color: rgba(188,188,188,0.1);
 	top: 20rem;
 	font-size: 2rem;
 	z-index: 5;
 	display: block;
 	position: sticky;
 	top: 0;
-	max-width: 400px;
 	padding: 1rem 1.5rem;
 }
 
@@ -91,6 +89,11 @@ h2 {
 }
 
 @media screen and (min-width: 501px) {
+	h2 {
+		background-color: rgba(188,188,188,0.1);
+		max-width: 400px;
+	}
+
 	.val-card {
 		width: 100%;
 
@@ -120,6 +123,11 @@ h2 {
 		font-size: 1.5rem;
 		letter-spacing: none;
 		line-height: normal;
+	}
+
+	h2 {
+		background: rgba(255,255,255, .8);
+    color: black;
 	}
 
 	.val-card {
