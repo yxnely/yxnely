@@ -51,27 +51,26 @@ h2 {
 		position: relative;
 		transform: rotate(-45deg);
 		width: 250px;
-    right: -60%;
-    bottom: 100px;
+    right: -65%;
+    bottom: 135px;
 	}
 
 	img.memory {
 		max-width: 500px;
 		width: 90%;
 		border: 1rem solid white;
-    border-bottom: 5rem solid white;
-	}
-
-	.caption,
-	.location {
-		position: relative;
+    border-bottom: 6rem solid white;
 	}
 
 	.caption {
 		font-family: "CarneysGalleryScriptDemoVer", Arial, Helvetica, sans-serif;
 		font-weight: bold;
 		bottom: 60px;
+		padding-bottom: 10px;
+		width: 80%;
 	}
+
+	.location { font-family: "CarneysGalleryDemoVersion", Arial, Helvetica, sans-serif; }
 	
 }
 
@@ -86,13 +85,11 @@ h2 {
 			bottom: -100px;
 		}
 
-		.caption {
-			right: 40px;
-		}
-
-		.location {
-			bottom: 30px;
-			right: 300px;
+		.container > div {
+			text-align: left;
+			position: relative;
+			bottom: 75px;
+			left: 30px;
 		}
 	}
 }
@@ -115,17 +112,11 @@ h2 {
 			bottom: -90px;
 		}
 
-		.caption {
-			display: block;
+		.container > div {
 			text-align: left;
-			padding-left: 15px;
-		}
-
-		.location {
-			right: -15px;
-			display: block;
-			text-align: left;
-			bottom: 50px;
+			position: relative;
+			bottom: 80px;
+			left: 30px;
 		}
 	}
 }

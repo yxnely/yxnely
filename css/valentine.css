@@ -40,20 +40,21 @@ h2 {
     position: relative;
     transform: rotate(-45deg);
     width: 250px;
-    right: -60%;
-    bottom: 100px; }
+    right: -65%;
+    bottom: 135px; }
   .val-card img.memory {
     max-width: 500px;
     width: 90%;
     border: 1rem solid white;
-    border-bottom: 5rem solid white; }
-  .val-card .caption,
-  .val-card .location {
-    position: relative; }
+    border-bottom: 6rem solid white; }
   .val-card .caption {
     font-family: "CarneysGalleryScriptDemoVer", Arial, Helvetica, sans-serif;
     font-weight: bold;
-    bottom: 60px; }
+    bottom: 60px;
+    padding-bottom: 10px;
+    width: 80%; }
+  .val-card .location {
+    font-family: "CarneysGalleryDemoVersion", Arial, Helvetica, sans-serif; }
 
 @media screen and (min-width: 501px) {
   .val-card {
@@ -63,11 +64,11 @@ h2 {
       width: 250px;
       right: 15%;
       bottom: -100px; }
-    .val-card .caption {
-      right: 40px; }
-    .val-card .location {
-      bottom: 30px;
-      right: 300px; } }
+    .val-card .container > div {
+      text-align: left;
+      position: relative;
+      bottom: 75px;
+      left: 30px; } }
 @media screen and (max-width: 500px) {
   h1 {
     font-size: 1.5rem;
@@ -82,14 +83,10 @@ h2 {
       width: 240px;
       right: 14%;
       bottom: -90px; }
-    .val-card .caption {
-      display: block;
+    .val-card .container > div {
       text-align: left;
-      padding-left: 15px; }
-    .val-card .location {
-      right: -15px;
-      display: block;
-      text-align: left;
-      bottom: 50px; } }
+      position: relative;
+      bottom: 80px;
+      left: 30px; } }
 
 /*# sourceMappingURL=valentine.css.map */
