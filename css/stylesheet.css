@@ -18,3 +18,12 @@
     font-style: normal;
 
 }
+
+@font-face {
+    font-family: 'impossible_regularregular';
+    src: url('../fonts/impossible-regular-webfont.woff2') format('woff2'),
+         url('../fonts/impossible-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}

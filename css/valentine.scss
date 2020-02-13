@@ -1,9 +1,12 @@
+// Variables
+$black: #191919;
+
 :root {
 	@import url('https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap');
 }
 
 body {
-	background-color: #191919;
+	background-color: $black;
 	color: #FC2036;
 }
 
@@ -45,25 +48,31 @@ h2 {
 		transform: rotate(-45deg);
 		width: 250px;
     right: -65%;
-    bottom: 135px;
+    bottom: 140px;
 	}
 
 	img.memory {
 		max-width: 500px;
 		width: 90%;
 		border: 1rem solid white;
-    border-bottom: 6rem solid white;
+    border-bottom: 8rem solid white;
 	}
 
 	.caption {
-		font-family: "carneys_gallery_script_demoRg", Arial, Helvetica, sans-serif;
+		font-family: "impossible_regularregular", Arial, Helvetica, sans-serif;
+		font-size: 2.5rem;
+		line-height: 2rem;
+    letter-spacing: 1px;
 		font-weight: bold;
 		bottom: 60px;
 		padding-bottom: 10px;
 		width: 80%;
 	}
 
-	.location { font-family: "carneys_gallery_demo_versioRg", Arial, Helvetica, sans-serif; }
+	.location {
+		font-family: "carneys_gallery_demo_versioRg", Arial, Helvetica, sans-serif;
+		color: $black;
+	}
 	
 }
 
@@ -81,7 +90,7 @@ h2 {
 		.container > div {
 			text-align: left;
 			position: relative;
-			bottom: 75px;
+			bottom: 110px;
 			left: 30px;
 		}
 	}

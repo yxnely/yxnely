@@ -36,20 +36,24 @@ h2 {
     transform: rotate(-45deg);
     width: 250px;
     right: -65%;
-    bottom: 135px; }
+    bottom: 140px; }
   .val-card img.memory {
     max-width: 500px;
     width: 90%;
     border: 1rem solid white;
-    border-bottom: 6rem solid white; }
+    border-bottom: 8rem solid white; }
   .val-card .caption {
-    font-family: "carneys_gallery_script_demoRg", Arial, Helvetica, sans-serif;
+    font-family: "impossible_regularregular", Arial, Helvetica, sans-serif;
+    font-size: 2.5rem;
+    line-height: 2rem;
+    letter-spacing: 1px;
     font-weight: bold;
     bottom: 60px;
     padding-bottom: 10px;
     width: 80%; }
   .val-card .location {
-    font-family: "carneys_gallery_demo_versioRg", Arial, Helvetica, sans-serif; }
+    font-family: "carneys_gallery_demo_versioRg", Arial, Helvetica, sans-serif;
+    color: #191919; }
 
 @media screen and (min-width: 501px) {
   .val-card {
@@ -62,7 +66,7 @@ h2 {
     .val-card .container > div {
       text-align: left;
       position: relative;
-      bottom: 75px;
+      bottom: 110px;
       left: 30px; } }
 @media screen and (max-width: 500px) {
   h1 {
