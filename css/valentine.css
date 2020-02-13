@@ -1,19 +1,12 @@
 :root {
   @import url("https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap"); }
-@font-face {
-  :root {
-    font-family: 'Carneys';
-    src: url(../fonts/CarneysGalleryDemoVersion.woff); } }
-@font-face {
-  :root {
-    font-family: 'Carneys Script';
-    src: url(../fonts/CarneysGalleryScriptDemoVer.woff); } }
+
 body {
-  background-color: #222;
+  background-color: #191919;
   color: #FC2036; }
 
 h1 {
-  font-family: "Abril Fatface", Arial, Helvetica, sans-serif;
+  font-family: "carneys_gallery_demo_versioRg", "Abril Fatface", Arial, Helvetica, sans-serif;
   line-height: 3rem;
   font-size: 2rem;
   text-align: center;
@@ -21,7 +14,7 @@ h1 {
   letter-spacing: .05rem; }
 
 h2 {
-  font-family: "Abril Fatface", Arial, Helvetica, sans-serif;
+  font-family: "carneys_gallery_demo_versioRg", Arial, Helvetica, sans-serif;
   transform: rotate(-90deg);
   display: inline-block;
   position: fixed;
@@ -50,13 +43,13 @@ h2 {
     border: 1rem solid white;
     border-bottom: 6rem solid white; }
   .val-card .caption {
-    font-family: "CarneysGalleryScriptDemoVer", Arial, Helvetica, sans-serif;
+    font-family: "carneys_gallery_script_demoRg", Arial, Helvetica, sans-serif;
     font-weight: bold;
     bottom: 60px;
     padding-bottom: 10px;
     width: 80%; }
   .val-card .location {
-    font-family: "CarneysGalleryDemoVersion", Arial, Helvetica, sans-serif; }
+    font-family: "carneys_gallery_demo_versioRg", Arial, Helvetica, sans-serif; }
 
 @media screen and (min-width: 501px) {
   .val-card {
