@@ -47,8 +47,6 @@ h2 {
 		position: relative;
 		transform: rotate(-45deg);
 		width: 250px;
-    right: -65%;
-    bottom: 140px;
 	}
 
 	img.memory {
@@ -87,6 +85,11 @@ h2 {
 			bottom: -100px;
 		}
 
+		> img:nth-of-type(2) {
+			right: -65%;
+    	bottom: 140px;
+		}
+
 		.container > div {
 			text-align: left;
 			position: relative;
@@ -114,11 +117,21 @@ h2 {
 			bottom: -90px;
 		}
 
+		> img:nth-of-type(2) {
+			right: -60%;
+    	bottom: 165px;
+		}
+
 		.container > div {
 			text-align: left;
 			position: relative;
-			bottom: 80px;
-			left: 30px;
+			bottom: 128px;
+			left: 10px;
+		}
+
+		.caption {
+			font-size: 2.2rem;
+			width: 95%;
 		}
 	}
 }
