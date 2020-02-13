@@ -1,17 +1,19 @@
+:root {
+  @import url("https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap"); }
 @font-face {
   :root {
-    font-family: Carneys;
+    font-family: 'Carneys';
     src: url(../fonts/CarneysGalleryDemoVersion.woff); } }
 @font-face {
   :root {
-    font-family: Carneys;
+    font-family: 'Carneys Script';
     src: url(../fonts/CarneysGalleryScriptDemoVer.woff); } }
 body {
   background-color: #222;
   color: #FC2036; }
 
 h1 {
-  font-family: "CarneysGalleryDemoVersion", Arial, Helvetica, sans-serif;
+  font-family: "Abril Fatface", Arial, Helvetica, sans-serif;
   line-height: 3rem;
   font-size: 2rem;
   text-align: center;
@@ -19,7 +21,7 @@ h1 {
   letter-spacing: .05rem; }
 
 h2 {
-  font-family: "CarneysGalleryDemoVersion", Arial, Helvetica, sans-serif;
+  font-family: "Abril Fatface", Arial, Helvetica, sans-serif;
   transform: rotate(-90deg);
   display: inline-block;
   position: fixed;
