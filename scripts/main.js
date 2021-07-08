@@ -5,7 +5,7 @@
 const handleColor = e => {
     var target = e.target;
     var project = target.dataset.project;
-    var path = 'images/blocks/';
+    var path = 'assets/blocks/';
 
     target.src = path + project + '.png';
 }
@@ -13,7 +13,7 @@ const handleColor = e => {
 const handleGreyscale = e => {
     var target = e.target;
     var project = target.dataset.project;
-    var path = 'images/blocks/';
+    var path = 'assets/blocks/';
 
     target.src = path + project + '-grey.png';
 }
