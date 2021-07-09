@@ -69,7 +69,8 @@ nav {
         right: 40px;
 
         ul {
-            width: 400px;
+            font-size: 20px;
+            width: 270px;
             -webkit-box-pack: justify;
                 -ms-flex-pack: justify;
                     justify-content: space-between;
@@ -168,7 +169,7 @@ nav {
 section {
     h2,
     h3 {
-        text-transform: uppercase;
+        // text-transform: uppercase;
     }
 }
 
@@ -377,7 +378,7 @@ section {
         flex-wrap: wrap;
     -ms-flex-pack: distribute;
         justify-content: space-between;
-    max-width: 1440px;
+    max-width: 1000px;
     padding: 0 3rem;
     width: 100%;
 
@@ -389,7 +390,7 @@ section {
     }
 
     h3 {
-        font-size: 2rem;
+        font-size: 1.7rem;
         width: 99%;
         margin: 1rem 0;
     }

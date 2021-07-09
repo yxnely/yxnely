@@ -99,7 +99,8 @@ nav a {
     right: 40px;
   }
   nav ul {
-    width: 400px;
+    font-size: 20px;
+    width: 270px;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
@@ -188,11 +189,6 @@ nav a {
 
 .work-overview {
   margin: 2rem 0;
-}
-
-section h2,
-section h3 {
-  text-transform: uppercase;
 }
 
 .icon {
@@ -394,7 +390,7 @@ section h3 {
   flex-wrap: wrap;
   -ms-flex-pack: distribute;
   justify-content: space-between;
-  max-width: 1440px;
+  max-width: 1000px;
   padding: 0 3rem;
   width: 100%;
 }
@@ -405,7 +401,7 @@ section h3 {
   border: 1px solid #E5E5E5;
 }
 .grid h3 {
-  font-size: 2rem;
+  font-size: 1.7rem;
   width: 99%;
   margin: 1rem 0;
 }
