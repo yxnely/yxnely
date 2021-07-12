@@ -445,14 +445,14 @@ nav a {
   display: flex;
 }
 .grid .mini-project__links a {
-  border: 1px solid var(--main-link-color);
+  border: 1.5px solid var(--main-link-color);
   border-radius: 3px;
   color: var(--main-link-color);
   display: inline-block;
   flex-grow: 1;
   font-weight: bold;
   margin-top: 1.5rem;
-  padding: 0.5rem 1rem;
+  padding: 1rem 1rem;
   text-decoration: none;
 }
 .grid .mini-project__links a:hover {
