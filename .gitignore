@@ -1,6 +1,10 @@
 .sass-cache
 .DS_Store
 css/.DS_Store
+<<<<<<< HEAD
 assets/.DS_Store
 assets/headers/.DS_Store
+=======
+.DS_Store
+>>>>>>> b8dd904 (fixed mapping page)
 css/redesign.css.map
