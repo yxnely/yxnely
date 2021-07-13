@@ -361,6 +361,45 @@ nav {
     }
 }
 
+/* --------- Main Project --------- */
+.main-work-projects {
+    h3 { text-align: center; }
+}
+.main-project {
+    img {
+        width: 100%;
+    }
+
+    .container { align-self: center; }
+}
+
+@media screen and (min-width: 768px) {
+    .main-project {
+        display: grid;
+        grid-template-areas: "a b";
+        grid-auto-flow: column;
+        margin-bottom: 10rem;
+        grid-gap: 2rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .main-work-projects {
+        .main-project {
+            display: flex;
+            flex-direction: column;
+            padding-top: 2.5rem;
+            padding-bottom: 2.5rem;
+            border-bottom: 1.75px solid #dfdfdf;
+
+            &:nth-of-type(odd) {
+                flex-direction: column-reverse;
+            }
+        }
+    }
+}
+
+
 /* ------------- Grid ------------- */
 .grid {
     margin: 1rem auto;
@@ -474,12 +513,20 @@ nav {
         .mini-project:nth-of-type(even) {
             margin-left: 1rem;
         }
+
+        .grid &:not(:last-of-type) {
+            margin-bottom: 10rem;
+        }
     }
 
     @media screen and (max-width: 850px) {
         .mini-project {
             width: 100%;
             margin-bottom: 1rem;
+        }
+
+        .grid &:not(:last-of-type) {
+            margin-bottom: 3rem;
         }
     }
 
@@ -518,27 +565,6 @@ nav {
         width: 20%;
     }
 
-    .button-container {
-        text-align: center;
-        
-        a {
-            border: 1.5px solid var(--main-link-color);
-            border-radius: 3px;
-            color: var(--main-link-color);
-            display: inline-block;
-            flex-grow: 1;
-            font-weight: bold;
-            margin-top: 1.5rem;
-            padding: 1rem 1rem;
-            text-decoration: none;
-
-            &:hover {
-                background-color: var(--main-link-color);
-                color: white;
-            }
-        }
-    }
-
     @media screen and (max-width: 767px) {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
@@ -550,6 +576,27 @@ nav {
         aside {
             width: 100%;
             border: 0;
+        }
+    }
+}
+
+.button-container {
+    text-align: center;
+
+    a {
+        border: 1.5px solid var(--main-link-color);
+        border-radius: 3px;
+        color: var(--main-link-color);
+        display: inline-block;
+        flex-grow: 1;
+        font-weight: bold;
+        margin-top: 1.5rem;
+        padding: .7rem 1.75rem;
+        text-decoration: none;
+
+        &:hover {
+            background-color: var(--main-link-color);
+            color: white;
         }
     }
 }
@@ -593,7 +640,7 @@ nav {
         &.left { margin-left: 0; }
     }
 
-    &-choral { background-color: #222222;}
+    &-choral { background-color: var(--main-text-color); }
     &-speedy { background-color: #FFFFFF; }
     &-gemini,
     &-kolea,
@@ -658,6 +705,14 @@ nav {
 .marvel {
     width: 100%;
     height: 600px;
+}
+
+footer {
+    padding: 1.5rem 0;
+    text-align: center;
+    font-weight: 500;
+    font-size: 14px;
+    background-color: #f9f9f9; 
 }
 
 @media screen and (min-width: 768px) {

@@ -380,6 +380,39 @@ nav a {
   width: 45%;
 }
 
+/* --------- Main Project --------- */
+.main-work-projects h3 {
+  text-align: center;
+}
+
+.main-project img {
+  width: 100%;
+}
+.main-project .container {
+  align-self: center;
+}
+
+@media screen and (min-width: 768px) {
+  .main-project {
+    display: grid;
+    grid-template-areas: "a b";
+    grid-auto-flow: column;
+    margin-bottom: 10rem;
+    grid-gap: 2rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .main-work-projects .main-project {
+    display: flex;
+    flex-direction: column;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    border-bottom: 1.75px solid #dfdfdf;
+  }
+  .main-work-projects .main-project:nth-of-type(odd) {
+    flex-direction: column-reverse;
+  }
+}
 /* ------------- Grid ------------- */
 .grid {
   margin: 1rem auto;
@@ -478,11 +511,17 @@ nav a {
   .grid .mini-project:nth-of-type(even) {
     margin-left: 1rem;
   }
+  .grid .grid:not(:last-of-type) {
+    margin-bottom: 10rem;
+  }
 }
 @media screen and (max-width: 850px) {
   .grid .mini-project {
     width: 100%;
     margin-bottom: 1rem;
+  }
+  .grid .grid:not(:last-of-type) {
+    margin-bottom: 3rem;
   }
 }
 @media screen and (max-width: 767px) {
@@ -517,24 +556,6 @@ nav a {
 .overview-body aside {
   width: 20%;
 }
-.overview-body .button-container {
-  text-align: center;
-}
-.overview-body .button-container a {
-  border: 1.5px solid var(--main-link-color);
-  border-radius: 3px;
-  color: var(--main-link-color);
-  display: inline-block;
-  flex-grow: 1;
-  font-weight: bold;
-  margin-top: 1.5rem;
-  padding: 1rem 1rem;
-  text-decoration: none;
-}
-.overview-body .button-container a:hover {
-  background-color: var(--main-link-color);
-  color: white;
-}
 @media screen and (max-width: 767px) {
   .overview-body {
     -webkit-box-orient: vertical;
@@ -548,6 +569,25 @@ nav a {
     width: 100%;
     border: 0;
   }
+}
+
+.button-container {
+  text-align: center;
+}
+.button-container a {
+  border: 1.5px solid var(--main-link-color);
+  border-radius: 3px;
+  color: var(--main-link-color);
+  display: inline-block;
+  flex-grow: 1;
+  font-weight: bold;
+  margin-top: 1.5rem;
+  padding: 0.7rem 1.75rem;
+  text-decoration: none;
+}
+.button-container a:hover {
+  background-color: var(--main-link-color);
+  color: white;
 }
 
 .shadow {
@@ -588,7 +628,7 @@ nav a {
   margin-left: 0;
 }
 .project-choral {
-  background-color: #222222;
+  background-color: var(--main-text-color);
 }
 .project-speedy {
   background-color: #FFFFFF;
@@ -649,6 +689,14 @@ nav a {
 .marvel {
   width: 100%;
   height: 600px;
+}
+
+footer {
+  padding: 1.5rem 0;
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+  background-color: #f9f9f9;
 }
 
 @media screen and (min-width: 768px) {
