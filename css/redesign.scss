@@ -166,13 +166,6 @@ nav {
     margin: 2rem 0;
 }
 
-section {
-    h2,
-    h3 {
-        // text-transform: uppercase;
-    }
-}
-
 .icon {
     max-width: 50px;
     margin-bottom: 1rem;
@@ -525,6 +518,27 @@ section {
         width: 20%;
     }
 
+    .button-container {
+        text-align: center;
+        
+        a {
+            border: 1.5px solid var(--main-link-color);
+            border-radius: 3px;
+            color: var(--main-link-color);
+            display: inline-block;
+            flex-grow: 1;
+            font-weight: bold;
+            margin-top: 1.5rem;
+            padding: 1rem 1rem;
+            text-decoration: none;
+
+            &:hover {
+                background-color: var(--main-link-color);
+                color: white;
+            }
+        }
+    }
+
     @media screen and (max-width: 767px) {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
@@ -610,6 +624,7 @@ section {
     border-bottom: 1px solid #ECECEC;
     padding-bottom: 1.5em;
     margin-bottom: 1.5em;
+
 }
 
 .flex-container {

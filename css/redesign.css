@@ -517,6 +517,24 @@ nav a {
 .overview-body aside {
   width: 20%;
 }
+.overview-body .button-container {
+  text-align: center;
+}
+.overview-body .button-container a {
+  border: 1.5px solid var(--main-link-color);
+  border-radius: 3px;
+  color: var(--main-link-color);
+  display: inline-block;
+  flex-grow: 1;
+  font-weight: bold;
+  margin-top: 1.5rem;
+  padding: 1rem 1rem;
+  text-decoration: none;
+}
+.overview-body .button-container a:hover {
+  background-color: var(--main-link-color);
+  color: white;
+}
 @media screen and (max-width: 767px) {
   .overview-body {
     -webkit-box-orient: vertical;
