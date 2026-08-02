@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>7-Day Alaska Explorer — Itinerary &amp; Packing Guide</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --fjord: #123C3E;
+    --fjord-deep: #0B2A2C;
+    --mist: #EAF1EF;
+    --mist-2: #F5F8F7;
+    --ice: #7FA8AC;
+    --amber: #C98A2C;
+    --amber-soft: #E7C793;
+    --ink: #202826;
+    --paper: #FDFCFA;
+    --line: rgba(18,60,62,0.14);
+    --serif: 'Fraunces', serif;
+    --sans: 'Work Sans', sans-serif;
+    --mono: 'IBM Plex Mono', monospace;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:var(--sans); line-height:1.55; -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;}
+  .wrap{max-width:920px; margin:0 auto; padding:0 28px;}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    background:
+      radial-gradient(ellipse at 20% -10%, rgba(201,138,44,0.22), transparent 55%),
+      linear-gradient(175deg, var(--fjord-deep) 0%, var(--fjord) 55%, #164448 100%);
+    color:var(--mist-2);
+    padding:64px 0 46px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero::after{
+    content:"";
+    position:absolute; inset:auto 0 0 0; height:160px;
+    background:linear-gradient(180deg, rgba(22,68,72,0) 0%, rgba(22,68,72,0.55) 45%, var(--paper) 100%);
+    pointer-events:none;
+  }
+  .hero-route{
+    position:absolute; right:-40px; top:-30px; width:340px; opacity:0.16;
+  }
+  .eyebrow{
+    font-family:var(--mono); font-size:12px; letter-spacing:0.14em; text-transform:uppercase;
+    color:var(--amber-soft); margin:0 0 14px;
+  }
+  .hero h1{
+    font-family:var(--serif); font-weight:600; font-size:clamp(34px,5vw,54px);
+    margin:0 0 10px; letter-spacing:-0.01em; max-width:640px;
+  }
+  .hero p.sub{
+    font-size:17px; color:#CFE0DD; max-width:520px; margin:0 0 30px;
+  }
+  .hero-meta{
+    display:flex; flex-wrap:wrap; gap:28px; margin-top:8px; position:relative; z-index:1;
+  }
+  .hero-meta div{padding-left:0;}
+  .hero-meta .label{font-family:var(--mono); font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; color:#9FC0BC;}
+  .hero-meta .value{font-family:var(--serif); font-size:19px; margin-top:3px; color:#fff;}
+
+  /* ---------- SECTION HEADERS ---------- */
+  .section-head{padding:54px 0 22px;}
+  .section-head .eyebrow{color:var(--amber);}
+  .section-head h2{
+    font-family:var(--serif); font-weight:600; font-size:30px; margin:0; color:var(--fjord-deep);
+  }
+  .section-head p{color:#5A6B68; max-width:600px; margin:10px 0 0; font-size:15px;}
+
+  /* ---------- TIMELINE ---------- */
+  .timeline{position:relative; padding-bottom:20px;}
+  .timeline::before{
+    content:""; position:absolute; left:29px; top:8px; bottom:8px; width:2px;
+    background:repeating-linear-gradient(180deg, var(--ice) 0 6px, transparent 6px 11px);
+  }
+  .day{position:relative; padding:0 0 40px 76px;}
+  .day:last-child{padding-bottom:6px;}
+  .day-marker{
+    position:absolute; left:0; top:2px; width:60px; height:60px; border-radius:50%;
+    background:var(--fjord); color:#fff; display:flex; flex-direction:column; align-items:center; justify-content:center;
+    font-family:var(--mono); box-shadow:0 0 0 5px var(--paper), 0 0 0 6px var(--line);
+  }
+  .day-marker .n{font-size:19px; font-weight:500; line-height:1;}
+  .day-marker .u{font-size:8px; letter-spacing:.08em; opacity:.75; margin-top:2px;}
+  .day.sea .day-marker{background:var(--ice); color:var(--fjord-deep);}
+  .day.port .day-marker{background:var(--amber); color:#33220A;}
+  .weekday{
+    font-family:var(--mono); font-size:10.5px; letter-spacing:.08em; text-transform:uppercase;
+    color:var(--amber); margin-bottom:2px;
+  }
+
+  .card{
+    background:#fff; border:1px solid var(--line); border-radius:14px; padding:24px 26px;
+    box-shadow:0 1px 2px rgba(11,42,44,0.04);
+  }
+  .card-top{display:flex; justify-content:space-between; align-items:flex-start; gap:16px; flex-wrap:wrap;}
+  .card-top h3{font-family:var(--serif); font-size:22px; margin:0; color:var(--fjord-deep); font-weight:600;}
+  .card-top .when{font-family:var(--mono); font-size:12.5px; color:#5A6B68; margin-top:4px;}
+  .tag-row{display:flex; gap:8px; flex-wrap:wrap;}
+  .tag{
+    font-family:var(--mono); font-size:10.5px; letter-spacing:.05em; text-transform:uppercase;
+    padding:5px 10px; border-radius:999px; border:1px solid var(--line); color:var(--fjord); white-space:nowrap;
+  }
+  .tag.weather{background:var(--mist); border-color:transparent;}
+  .tag.rain{background:#E3EDF5; color:#31556B;}
+
+  .card-body{margin-top:16px; font-size:14.5px; color:#3A4644;}
+  .card-body p{margin:0 0 10px;}
+
+  .booked{
+    margin-top:16px; background:var(--mist); border-left:3px solid var(--amber);
+    border-radius:0 8px 8px 0; padding:12px 16px;
+  }
+  .booked .label{font-family:var(--mono); font-size:10.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--amber); margin-bottom:3px;}
+  .booked .title{font-weight:600; color:var(--fjord-deep);}
+  .booked .time{font-family:var(--mono); font-size:12.5px; color:#5A6B68;}
+
+  .suggest{margin-top:16px;}
+  .suggest .label{font-family:var(--mono); font-size:10.5px; letter-spacing:.08em; text-transform:uppercase; color:#5A6B68; margin-bottom:8px;}
+  .opt{
+    display:flex; justify-content:space-between; gap:14px; padding:10px 0; border-top:1px dashed var(--line);
+    font-size:14px;
+  }
+  .opt:first-of-type{border-top:none;}
+  .opt .name{font-weight:600; color:var(--fjord-deep);}
+  .opt .desc{color:#5A6B68; font-size:13px; margin-top:2px;}
+  .opt .meta{font-family:var(--mono); font-size:12px; color:#5A6B68; white-space:nowrap; text-align:right;}
+
+  .tip{
+    margin-top:14px; display:flex; gap:10px; align-items:flex-start; font-size:13.5px; color:#4A5754;
+    background:#FBF6EC; border:1px solid #EFDFB8; border-radius:8px; padding:10px 14px;
+  }
+  .tip b{color:#8A5F17;}
+
+  .extra-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(230px, 1fr)); gap:16px; margin-top:16px;}
+  @media (max-width:640px){.extra-grid{grid-template-columns:1fr;}}
+  .extra-box{background:var(--mist-2); border:1px solid var(--line); border-radius:10px; padding:14px 16px;}
+  .extra-box .label{
+    font-family:var(--mono); font-size:10.5px; letter-spacing:.08em; text-transform:uppercase;
+    color:var(--fjord); margin-bottom:8px; display:flex; align-items:center; gap:6px;
+  }
+  .extra-box ul{margin:0; padding:0; list-style:none;}
+  .extra-box li{font-size:13.5px; color:#3A4644; padding:8px 0; border-top:1px dashed var(--line);}
+  .extra-box li:first-child{border-top:none; padding-top:0;}
+  .extra-box li b{color:var(--fjord-deep); display:block; font-weight:600;}
+  .extra-box li .meta{font-family:var(--mono); font-size:11px; color:#7C8B87; display:block; margin-top:3px;}
+  .extra-box li .desc{display:block; margin-top:2px; color:#5A6B68;}
+  .extra-box li.indulge b{color:var(--amber);}
+  .extra-box li.indulge b::before{content:"Not counting calories — "; color:#7C8B87; font-weight:400; text-transform:none; font-family:var(--sans); letter-spacing:0;}
+
+  /* ---------- CALENDAR ---------- */
+  .calendar{
+    background:#fff; border:1px solid var(--line); border-radius:16px; padding:24px 26px 26px;
+    margin:26px 0 46px;
+  }
+  .calendar-head{display:flex; align-items:center; justify-content:space-between; margin-bottom:16px; flex-wrap:wrap; gap:10px;}
+  .calendar-head h3{font-family:var(--serif); font-size:20px; margin:0; color:var(--fjord-deep); font-weight:600;}
+  .calendar-legend{display:flex; gap:16px; font-family:var(--mono); font-size:11px; color:#5A6B68; align-items:center;}
+  .calendar-legend .dot{display:inline-block; width:9px; height:9px; border-radius:3px; margin-right:5px; vertical-align:-1px;}
+  .calendar-legend .dot.port{background:var(--amber);}
+  .calendar-legend .dot.sea{background:var(--ice);}
+  .cal-grid{display:grid; grid-template-columns:repeat(7, minmax(0,1fr)); gap:6px;}
+  .cal-dow{
+    font-family:var(--mono); font-size:10px; letter-spacing:.06em; text-transform:uppercase;
+    color:#8A9591; text-align:center; padding-bottom:4px;
+  }
+  .cal-cell{
+    min-width:0; min-height:52px; border-radius:9px; padding:6px 7px; font-size:11px; position:relative;
+    background:var(--mist-2); color:#B9C2BF; display:flex; flex-direction:column; overflow:hidden;
+  }
+  .cal-cell .date{font-family:var(--mono); font-size:12px;}
+  .cal-cell.muted{background:transparent; color:#DADFDC;}
+  .cal-cell.active{color:var(--ink); background:var(--mist); border:1px solid var(--line);}
+  .cal-cell.cruise{color:#fff; justify-content:space-between;}
+  .cal-cell.cruise .date{color:rgba(255,255,255,0.85);}
+  .cal-cell.cruise.port{background:var(--amber); color:#33220A;}
+  .cal-cell.cruise.port .date{color:rgba(51,34,10,0.65);}
+  .cal-cell.cruise.sea{background:var(--ice); color:var(--fjord-deep);}
+  .cal-cell.cruise.sea .date{color:rgba(18,60,62,0.6);}
+  .cal-cell .port-name{font-weight:600; font-size:10.5px; line-height:1.25; margin-top:auto; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+  .cal-cell .port-name .short{display:none;}
+  .cal-cell .day-n{font-family:var(--mono); font-size:9px; opacity:.75;}
+
+  /* Tablet: tighten spacing, keep full labels */
+  @media (max-width:640px){
+    .calendar{padding:18px 14px 18px;}
+    .cal-grid{gap:4px;}
+    .cal-cell{font-size:9px; padding:5px 5px; min-height:46px;}
+    .cal-cell .date{font-size:10.5px;}
+    .cal-cell .port-name{font-size:8.5px;}
+  }
+
+  /* Phone: swap to abbreviated port labels and drop the day-of-cruise tag so nothing clips */
+  @media (max-width:480px){
+    .wrap{padding:0 16px;}
+    .calendar{padding:16px 10px 16px; border-radius:12px;}
+    .calendar-head{gap:6px;}
+    .calendar-head h3{font-size:17px;}
+    .calendar-legend{gap:10px; font-size:9.5px;}
+    .cal-grid{gap:3px;}
+    .cal-dow{font-size:8px;}
+    .cal-cell{min-height:40px; padding:4px 3px; border-radius:6px;}
+    .cal-cell .date{font-size:9.5px;}
+    .cal-cell .port-name{font-size:7.5px; letter-spacing:-0.01em;}
+    .cal-cell .port-name .full{display:none;}
+    .cal-cell .port-name .short{display:inline;}
+    .cal-cell .day-n{display:none;}
+  }
+
+  /* ---------- PACKING ---------- */
+  .pack-grid{display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-top:6px;}
+  @media (max-width:680px){.pack-grid{grid-template-columns:1fr;}}
+  .pack-card{
+    background:#fff; border:1px solid var(--line); border-radius:14px; overflow:hidden;
+  }
+  .pack-card h4{
+    margin:0; font-family:var(--serif); font-size:17px; padding:16px 20px; background:var(--mist);
+    color:var(--fjord-deep); font-weight:600; display:flex; align-items:center; gap:8px;
+  }
+  .pack-card ul{list-style:none; margin:0; padding:8px 8px 12px;}
+  .pack-card li{
+    display:flex; align-items:flex-start; gap:10px; padding:8px 12px; border-radius:8px; font-size:14px;
+  }
+  .pack-card li:hover{background:var(--mist-2);}
+  .pack-card input[type=checkbox]{
+    appearance:none; width:16px; height:16px; border:1.5px solid var(--ice); border-radius:4px;
+    margin-top:2px; flex-shrink:0; cursor:pointer; position:relative;
+  }
+  .pack-card input[type=checkbox]:checked{background:var(--amber); border-color:var(--amber);}
+  .pack-card input[type=checkbox]:checked::after{
+    content:""; position:absolute; left:4px; top:0.5px; width:4px; height:8px;
+    border:solid white; border-width:0 2px 2px 0; transform:rotate(45deg);
+  }
+  .pack-card label{cursor:pointer; flex:1;}
+  .pack-card label .note{display:block; font-size:12px; color:#8A9591; margin-top:1px;}
+
+  .person-toggle{
+    display:flex; gap:10px; margin:8px 0 26px;
+  }
+  .person-toggle button{
+    font-family:var(--mono); font-size:12px; letter-spacing:.05em; text-transform:uppercase;
+    padding:9px 18px; border-radius:999px; border:1.5px solid var(--fjord); background:transparent;
+    color:var(--fjord); cursor:pointer; transition:all .15s ease;
+  }
+  .person-toggle button.active{background:var(--fjord); color:#fff;}
+
+  .person-list{display:none;}
+  .person-list.active{display:grid;}
+
+  footer{
+    text-align:center; padding:50px 0 60px; color:#8A9591; font-size:12.5px; font-family:var(--mono);
+  }
+  footer .anchor{color:var(--amber); font-size:16px; display:block; margin-bottom:8px;}
+
+  ::selection{background:var(--amber-soft);}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <svg class="hero-route" viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg">
+    <path d="M240 380 C 130 320, 70 200, 100 80 C 110 40, 140 20, 150 10" stroke="#E7C793" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M240 380 C 150 330, 110 210, 130 90" stroke="#E7C793" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.6"/>
+    <circle cx="240" cy="380" r="6" fill="#E7C793"/>
+    <circle cx="150" cy="10" r="4" fill="#E7C793"/>
+  </svg>
+  <div class="wrap">
+    <p class="eyebrow">Yanely &amp; Thomas · Aug 8–15, 2026</p>
+    <h1>7-Day Alaska Explorer</h1>
+    <p class="sub">Seattle round-trip through the Inside Passage — Juneau, Glacier Bay, Icy Strait Point, Sitka, Ketchikan &amp; Victoria, aboard the ms Eurodam.</p>
+    <div class="hero-meta">
+      <div><div class="label">Ship</div><div class="value">Eurodam</div></div>
+      <div><div class="label">Stateroom</div><div class="value">4119</div></div>
+      <div><div class="label">Departs</div><div class="value">Sat Aug 8, 3:00pm</div></div>
+      <div><div class="label">Returns</div><div class="value">Sat Aug 15, 7:00am</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="section-head">
+    <p class="eyebrow">Day by day</p>
+    <h2>The route</h2>
+    <p>Weather is the historical August average for each port — pack for all of it, since Southeast Alaska can shift within a single afternoon. Booked excursions are pulled from your itinerary; the rest are shortlisted from the excursion brochure and past-traveler notes, matched to a moderately active pace. Each day also has a calorie-conscious food stop and an indulgent one, timed to your actual port hours, plus what to do onboard and on land.</p>
+  </div>
+
+  <div class="calendar">
+    <div class="calendar-head">
+      <h3>August 2026</h3>
+      <div class="calendar-legend"><span class="dot port"></span>Port day <span class="dot sea"></span>Sea day</div>
+    </div>
+    <div class="cal-grid">
+      <div class="cal-dow">Sun</div><div class="cal-dow">Mon</div><div class="cal-dow">Tue</div><div class="cal-dow">Wed</div><div class="cal-dow">Thu</div><div class="cal-dow">Fri</div><div class="cal-dow">Sat</div>
+      <div class="cal-cell muted"><span class="date">26</span></div>
+      <div class="cal-cell muted"><span class="date">27</span></div>
+      <div class="cal-cell muted"><span class="date">28</span></div>
+      <div class="cal-cell muted"><span class="date">29</span></div>
+      <div class="cal-cell muted"><span class="date">30</span></div>
+      <div class="cal-cell muted"><span class="date">31</span></div>
+      <div class="cal-cell active"><span class="date">1</span></div>
+      <div class="cal-cell active"><span class="date">2</span></div>
+      <div class="cal-cell active"><span class="date">3</span></div>
+      <div class="cal-cell active"><span class="date">4</span></div>
+      <div class="cal-cell active"><span class="date">5</span></div>
+      <div class="cal-cell active"><span class="date">6</span></div>
+      <div class="cal-cell active"><span class="date">7</span></div>
+      <div class="cal-cell cruise port"><span class="date">8</span><span class="port-name"><span class="full">Embark · Seattle</span><span class="short">Embark</span></span><span class="day-n">Day 1</span></div>
+      <div class="cal-cell cruise sea"><span class="date">9</span><span class="port-name"><span class="full">At sea</span><span class="short">At sea</span></span><span class="day-n">Day 2</span></div>
+      <div class="cal-cell cruise port"><span class="date">10</span><span class="port-name"><span class="full">Juneau</span><span class="short">Juneau</span></span><span class="day-n">Day 3</span></div>
+      <div class="cal-cell cruise port"><span class="date">11</span><span class="port-name"><span class="full">Glacier Bay / ISP</span><span class="short">Gl. Bay</span></span><span class="day-n">Day 4</span></div>
+      <div class="cal-cell cruise port"><span class="date">12</span><span class="port-name"><span class="full">Sitka</span><span class="short">Sitka</span></span><span class="day-n">Day 5</span></div>
+      <div class="cal-cell cruise port"><span class="date">13</span><span class="port-name"><span class="full">Ketchikan</span><span class="short">Ketch.</span></span><span class="day-n">Day 6</span></div>
+      <div class="cal-cell cruise port"><span class="date">14</span><span class="port-name"><span class="full">Victoria</span><span class="short">Victoria</span></span><span class="day-n">Day 7</span></div>
+      <div class="cal-cell cruise port"><span class="date">15</span><span class="port-name"><span class="full">Disembark · Seattle</span><span class="short">Disembark</span></span><span class="day-n">Day 8</span></div>
+      <div class="cal-cell active"><span class="date">16</span></div>
+      <div class="cal-cell active"><span class="date">17</span></div>
+      <div class="cal-cell active"><span class="date">18</span></div>
+      <div class="cal-cell active"><span class="date">19</span></div>
+      <div class="cal-cell active"><span class="date">20</span></div>
+      <div class="cal-cell active"><span class="date">21</span></div>
+      <div class="cal-cell active"><span class="date">22</span></div>
+      <div class="cal-cell active"><span class="date">23</span></div>
+      <div class="cal-cell active"><span class="date">24</span></div>
+      <div class="cal-cell active"><span class="date">25</span></div>
+      <div class="cal-cell active"><span class="date">26</span></div>
+      <div class="cal-cell active"><span class="date">27</span></div>
+      <div class="cal-cell active"><span class="date">28</span></div>
+      <div class="cal-cell active"><span class="date">29</span></div>
+      <div class="cal-cell active"><span class="date">30</span></div>
+      <div class="cal-cell active"><span class="date">31</span></div>
+      <div class="cal-cell muted"><span class="date">1</span></div>
+      <div class="cal-cell muted"><span class="date">2</span></div>
+      <div class="cal-cell muted"><span class="date">3</span></div>
+      <div class="cal-cell muted"><span class="date">4</span></div>
+      <div class="cal-cell muted"><span class="date">5</span></div>
+    </div>
+  </div>
+
+  <div class="timeline">
+
+    <!-- DAY 1 -->
+    <div class="day port">
+      <div class="day-marker"><span class="n">1</span><span class="u">SAT</span></div>
+      <div class="card">
+        <div class="card-top">
+          <div>
+            <h3>Seattle, Washington</h3>
+            <div class="when">Saturday, August 8 · Embarkation · departs 3:00pm</div>
+          </div>
+          <div class="tag-row">
+            <span class="tag weather">78° / 59°F</span>
+            <span class="tag">Mild &amp; dry</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <p>No activities booked — an easy boarding day. Aim to be at the terminal by early afternoon, then head straight to the top deck for sail-away as you pass under the Seattle skyline into Puget Sound.</p>
+        </div>
+        <div class="extra-grid">
+          <div class="extra-box">
+            <div class="label">🍽 Eat</div>
+            <ul>
+              <li><b>Pike Place Market, before boarding</b><span class="meta">~11:00am – 12:30pm</span><span class="desc">Grab a grilled-salmon salad or poke bowl rather than the fried classics — light enough to still enjoy the sail-away toast.</span></li>
+              <li><b>Main Dining Room, onboard</b><span class="meta">Open seating 5:15 – 7:00pm</span><span class="desc">Keep night one simple after a travel day: grilled fish or chicken entrée with the vegetable side.</span></li>
+              <li class="indulge"><b>Pike Place Chowder</b><span class="meta">~11:30am, in a sourdough bread bowl</span><span class="desc">The line moves fast and it's a Seattle classic worth the calories.</span></li>
+            </ul>
+          </div>
+          <div class="extra-box">
+            <div class="label">⛴ Onboard</div>
+            <ul>
+              <li><b>Sail-away on the Lido Deck</b><span class="desc">Live music and a view of the skyline as you pull out of Puget Sound.</span></li>
+              <li><b>Muster drill, then explore</b><span class="desc">Once the safety drill wraps, walk the ship before dinner crowds settle in.</span></li>
+            </ul>
+          </div>
+          <div class="extra-box">
+            <div class="label">🧭 Do &amp; shop</div>
+            <ul>
+              <li><b>Pike Place Market</b><span class="desc">Browse the original farmers market and waterfront shops if you arrive early.</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 2 -->
+    <div class="day sea">
+      <div class="day-marker"><span class="n">2</span><span class="u">SUN</span></div>
+      <div class="card">
+        <div class="card-top">
+          <div>
+            <h3>At Sea</h3>
+            <div class="when">Sunday, August 9 · Cruising toward the Inside Passage</div>
+          </div>
+          <div class="tag-row">
+            <span class="tag weather">64° / 55°F</span>
+            <span class="tag">Breezy on deck</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <p>A full sea day — the water cools noticeably as you head north. Good day to lay out tomorrow's layers and charge every battery before Juneau. If Holland America has an onboard naturalist lecture scheduled, past travelers say it meaningfully improves the wildlife-spotting days ahead.</p>
+        </div>
+        <div class="extra-grid">
+          <div class="extra-box">
+            <div class="label">🍽 Eat</div>
+            <ul>
+              <li><b>Lido Market, breakfast</b><span class="meta">7:00 – 10:00am</span><span class="desc">Build a protein plate — eggs, smoked salmon, fruit — and skip the pastry case.</span></li>
+              <li><b>Lido Market or Dive-In, lunch</b><span class="meta">11:30am – 1:30pm</span><span class="desc">Salad bar plus grilled chicken or fish instead of the burger stand.</span></li>
+              <li><b>Tamarind, dinner</b><span class="meta">~6:00pm, before the evening show</span><span class="desc">Pan-Asian small plates make it easy to control portions — share a few rather than over-ordering.</span></li>
+              <li class="indulge"><b>Dive-In cheeseburger &amp; fries</b><span class="meta">Poolside, any time it's open</span><span class="desc">Classic cruise poolside indulgence — best enjoyed in a deck chair.</span></li>
+            </ul>
+          </div>
+          <div class="extra-box">
+            <div class="label">⛴ Onboard</div>
+            <ul>
+              <li><b>Culinary Arts Center demo</b><span class="desc">A hands-on cooking class or chef demo — check the daily program for timing.</span></li>
+              <li><b>Greenhouse Spa thermal suite</b><span class="desc">A quiet, warm reset before the busier port days start.</span></li>
+              <li><b>Trivia in the Ocean Bar</b><span class="desc">A relaxed way to spend the late afternoon before dinner.</span></li>
+            </ul>
+          </div>
+          <div class="extra-box">
+            <div class="label">🧭 Do &amp; shop</div>
+            <ul>
+              <li><b>Gym or Promenade Deck walk</b><span class="desc">A lap of the Promenade Deck is roughly a third of a mile — good for a movement break between meals.</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 3 -->
+    <div class="day port">
+      <div class="day-marker"><span class="n">3</span><span class="u">MON</span></div>
+      <div class="card">
+        <div class="card-top">
+          <div>
+            <h3>Juneau, Alaska</h3>
+            <div class="when">Monday, August 10 · In port 12:30pm – 10:00pm</div>
+          </div>
+          <div class="tag-row">
+            <span class="tag weather">58° / 48°F</span>
+            <span class="tag rain">58% chance of rain</span>
+          </div>
+        </div>
+        <div class="booked">
+          <div class="label">Booked · Both travelers</div>
+          <div class="title">Mendenhall Glacier Helicopter &amp; Guided Walk</div>
+          <div class="time">3:45pm departure</div>
+        </div>
+        <div class="tip"><b>Insider tip —</b> if you have any free time before or after the flight, the Nugget Falls Photo Point Trail is a short, flat walk directly across the lake from Mendenhall Glacier and worth the detour. Bring binoculars — mountain goats are regularly spotted on the ridgeline above the visitor center.</div>
+        <div class="extra-grid">
+          <div class="extra-box">
+            <div class="label">🍽 Eat</div>
+            <ul>
+              <li><b>Alaska Fish &amp; Chips Co., lunch</b><span class="meta">~12:45 – 1:30pm, before your 3:45pm tour</span><span class="desc">Order the fish tacos or a salmon salad instead of the fried basket to stay light before the helicopter.</span></li>
+              <li><b>Tracy's King Crab Shack, early dinner</b><span class="meta">~6:00 – 7:00pm, after the tour lands</span><span class="desc">Straightforward steamed crab — split a portion between you, no heavy sauce needed.</span></li>
+              <li class="indulge"><b>Tracy's whole king crab leg</b><span class="meta">Same visit, go all in this time</span><span class="desc">Extra garlic butter, no splitting — it's Juneau's most famous plate for a reason.</span></li>
+            </ul>
+          </div>
+          <div class="extra-box">
+            <div class="label">⛴ Onboard</div>
+            <ul>
+              <li><b>Evening show or casino</b><span class="desc">Once you're back around 7pm, check the World Stage program before all-aboard.</span></li>
+            </ul>
+          </div>
+          <div class="extra-box">
+            <div class="label">🧭 Do &amp; shop</div>
+            <ul>
+              <li><b>South Franklin Street</b><span class="desc">Native art galleries and the Alaskan Brewing Co. tasting room, steps from the dock.</span></li>
+              <li><b>Mount Roberts Tramway</b><span class="desc">If time allows after the tour, a quick ride up for a Gastineau Channel view.</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 4 -->
+    <div class="day port">
+      <div class="day-marker"><span class="n">4</span><span class="u">TUE</span></div>
+      <div class="card">
+        <div class="card-top">
+          <div>
+            <h3>Glacier Bay &amp; Icy Strait Point</h3>
+            <div class="when">Tuesday, August 11 · Scenic cruising 7:00am – 4:00pm · in port 6:00pm – 10:00pm</div>
+          </div>
+          <div class="tag-row">
+            <span class="tag weather">57° / 47°F</span>
+            <span class="tag rain">Cold near ice</span>
+          </div>
+        </div>
+        <div class="booked">
+          <div class="label">Booked · Both travelers</div>
+          <div class="title">The ZipRider Adventure &amp; Sky Peak Gondola</div>
+          <div class="time">7:30pm departure, Icy Strait Point</div>
+        </div>
+        <div class="tip"><b>From past sailings —</b> sunrise is around 6am and the ship often enters Glacier Bay right around then, so get to sleep the night before. Go out on deck rather than watching from the cabin — you'll hear the glacier calve, which you can't from inside. Port-side decks tend to get the closer glacier views on this route. Layer up, bring sunblock (the glare off the ice is real), and keep binoculars around your neck — otters and whales don't linger.</div>
+        <div class="extra-grid">
+          <div class="extra-box">
+            <div class="label">🍽 Eat</div>
+            <ul>
+              <li><b>Coffee &amp; fruit on your balcony</b><span class="meta">~6:00 – 6:30am</span><span class="desc">A small bite so you don't have to choose between breakfast and sunrise glacier viewing.</span></li>
+              <li><b>Lido Market, full breakfast</b><span class="meta">8:00 – 9:30am, once past the closest viewing</span></li>
+              <li><b>Duck Point Smokehouse or Crab House, Icy Strait Point</b><span class="meta">~8:30 – 9:30pm, after the ZipRider</span><span class="desc">Smoked salmon or crab — both naturally protein-forward with little added prep.</span></li>
+              <li class="indulge"><b>Duck Point Surf &amp; Turf with crab tater tots</b><span class="meta">Same stop, same window</span><span class="desc">A locals' favorite, and hard to justify skipping after a ZipRider adrenaline hit.</span></li>
+            </ul>
+          </div>
+          <div class="extra-box">
+            <div class="label">⛴ Onboard</div>
+            <ul>
+              <li><b>Crow's Nest observation lounge</b><span class="desc">The best vantage point for glacier viewing, with a ranger narrating over the PA during the cruise-through.</span></li>
+              <li><b>Deck barbecue</b><span class="desc">Holland America often runs an outdoor lunch grill on Glacier Bay day — worth checking the program.</span></li>
+            </ul>
+          </div>
+          <div class="extra-box">
+            <div class="label">🧭 Do &amp; shop</div>
+            <ul>
+              <li><b>The Cannery shops</b><span class="desc">All Alaskan-owned — jewelry, art and canned Sockeye salmon to bring home.</span></li>
+              <li><b>Icy Strait Brewing</b><span class="desc">A short stroll from the pier if you have time before or after the ZipRider.</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 5 -->
+    <div class="day port">
+      <div class="day-marker"><span class="n">5</span><span class="u">WED</span></div>
+      <div class="card">
+        <div class="card-top">
+          <div>
+            <h3>Sitka, Alaska</h3>
+            <div class="when">Wednesday, August 12 · In port 8:00am – 4:00pm</div>
+          </div>
+          <div class="tag-row">
+            <span class="tag weather">60° / 53°F</span>
+            <span class="tag rain">Rain likely</span>
+          </div>
+        </div>
+        <div class="suggest">
+          <div class="label">Nothing booked yet — shortlist for a moderately active pair</div>
+          <div class="opt">
+            <div><div class="name">Authentic Alaska: Tongass Rainforest Hike</div><div class="desc">Guided 2-hour, ~3-mile walk through old-growth rainforest with wild-berry foraging and salmon jerky tasting.</div></div>
+            <div class="meta">~2 hrs<br>$124.95pp</div>
+          </div>
+          <div class="opt">
+            <div><div class="name">Best of Sitka: Otters, Raptors &amp; Bears</div><div class="desc">Boat tour covering otters, whales, sea lions and bears — minimal walking, 99% wildlife-sighting rate.</div></div>
+            <div class="meta">~5 hrs<br>$269.95pp</div>
+          </div>
+        </div>
+        <div class="tip"><b>Pack for it —</b> the brochure flags a windproof, waterproof outer layer plus hat, gloves and scarf for every Sitka tour — this is the wettest port on your route.</div>
+        <div class="extra-grid">
+          <div class="extra-box">
+            <div class="label">🍽 Eat</div>
+            <ul>
+              <li><b>Halibut Point Crab &amp; Chowder, lunch</b><span class="meta">~11:30am, ahead of the 12:30pm rush</span><span class="desc">Dockside at the terminal — split a cup of chowder and a crab plate rather than the full combo.</span></li>
+              <li><b>Highliner Coffee</b><span class="meta">Any time — good pre-hike stop</span><span class="desc">A smoked salmon bagel is a solid protein-forward option before the Tongass hike.</span></li>
+              <li class="indulge"><b>Burger &amp; crab shack crab boil basket</b><span class="meta">~12:30 – 1:15pm</span><span class="desc">Full crab boil with fries, no need to split it today.</span></li>
+            </ul>
+          </div>
+          <div class="extra-box">
+            <div class="label">⛴ Onboard</div>
+            <ul>
+              <li><b>Evening show or casino</b><span class="desc">Back onboard by 4pm — a quieter afternoon to rest before Ketchikan's early start tomorrow.</span></li>
+            </ul>
+          </div>
+          <div class="extra-box">
+            <div class="label">🧭 Do &amp; shop</div>
+            <ul>
+              <li><b>Sitka National Historical Park</b><span class="desc">A flat, free totem-pole trail along the water — an easy add either side of a tour.</span></li>
+              <li><b>Lincoln Street shops</b><span class="desc">Tlingit and Russian-era crafts near the Russian Bishop's House.</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 6 -->
+    <div class="day port">
+      <div class="day-marker"><span class="n">6</span><span class="u">THU</span></div>
+      <div class="card">
+        <div class="card-top">
+          <div>
+            <h3>Ketchikan, Alaska</h3>
+            <div class="when">Thursday, August 13 · In port 6:30am – 1:00pm — short window, early start</div>
+          </div>
+          <div class="tag-row">
+            <span class="tag weather">64° / 53°F</span>
+            <span class="tag rain">Rainiest port</span>
+          </div>
+        </div>
+        <div class="suggest">
+          <div class="label">Nothing booked yet — the morning-only window fits these best</div>
+          <div class="opt">
+            <div><div class="name">Bering Sea Crab Fishermen</div><div class="desc">Aboard the Aleutian Ballad, the actual boat from Discovery's Deadliest Catch — crab pots, eagles, sea lions, calm water.</div></div>
+            <div class="meta">~3¼ hrs<br>$244.95pp</div>
+          </div>
+          <div class="opt">
+            <div><div class="name">Backcountry Jeep &amp; Canoe Safari</div><div class="desc">Self-drive 4x4 through Tongass forest, then canoe across Lake Harriet Hunt — moderately fit required.</div></div>
+            <div class="meta">~4 hrs<br>$234.95pp</div>
+          </div>
+        </div>
+        <div class="tip"><b>From past sailings —</b> a previous Ketchikan visit did both the Deadliest Catch–style crab tour and a floatplane flight with a local operator, calling the crab tour a highlight of the whole trip. With only 6.5 hours in port, one tour departing by 7:30am leaves you time to get back for a relaxed lunch before all-aboard.</div>
+        <div class="extra-grid">
+          <div class="extra-box">
+            <div class="label">🍽 Eat</div>
+            <ul>
+              <li><b>NY Cafe, quick breakfast</b><span class="meta">~7:00am, before the 7:30am tour</span><span class="desc">Their house salmon cream cheese on a bagel, in and out fast.</span></li>
+              <li><b>Alaska Fish House, lunch</b><span class="meta">~11:30am – 12:15pm, before 1pm all-aboard</span><span class="desc">Ask for their halibut grilled rather than fried — the kitchen will do it.</span></li>
+              <li class="indulge"><b>Bar Harbor Restaurant prime rib sandwich</b><span class="meta">Same lunch window, extra au jus</span><span class="desc">A hearty finish before you're back to ship food for the afternoon.</span></li>
+            </ul>
+          </div>
+          <div class="extra-box">
+            <div class="label">⛴ Onboard</div>
+            <ul>
+              <li><b>Pool deck or spa, afternoon</b><span class="desc">Back onboard by 1pm with the whole afternoon open — good day for the thermal suite or a deck chair.</span></li>
+            </ul>
+          </div>
+          <div class="extra-box">
+            <div class="label">🧭 Do &amp; shop</div>
+            <ul>
+              <li><b>Creek Street boardwalk</b><span class="desc">Native art galleries and Dolly's House Museum, built out over the creek itself.</span></li>
+              <li><b>Totem art shops</b><span class="desc">Carved pieces along the main tourist strip near the dock.</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 7 -->
+    <div class="day port">
+      <div class="day-marker"><span class="n">7</span><span class="u">FRI</span></div>
+      <div class="card">
+        <div class="card-top">
+          <div>
+            <h3>Victoria, British Columbia</h3>
+            <div class="when">Friday, August 14 · In port 8:00pm – 11:59pm — evening only</div>
+          </div>
+          <div class="tag-row">
+            <span class="tag weather">71° / 54°F</span>
+            <span class="tag">Driest, mildest port</span>
+          </div>
+        </div>
+        <div class="suggest">
+          <div class="label">Nothing booked yet — built for a late arrival</div>
+          <div class="opt">
+            <div><div class="name">Enchanting Butchart Gardens (Evening)</div><div class="desc">The gardens after dark — lit paths, the Ross Fountain, and the floral scent that only shows up once the color fades.</div></div>
+            <div class="meta">~3¼ hrs<br>$144.95pp</div>
+          </div>
+          <div class="opt">
+            <div><div class="name">Easy Victoria Highlights</div><div class="desc">Low-effort coach tour past the Inner Harbour, Empress Hotel and Chinatown — good if you're tired from Ketchikan.</div></div>
+            <div class="meta">~2 hrs<br>$94.95pp</div>
+          </div>
+        </div>
+        <div class="tip"><b>From past sailings —</b> a pedicab tour of the Inner Harbour was called "well worth the money" by a previous traveler — worth asking about dockside if you'd rather stay independent and skip pre-booking.</div>
+        <div class="extra-grid">
+          <div class="extra-box">
+            <div class="label">🍽 Eat</div>
+            <ul>
+              <li><b>Main Dining Room, dinner</b><span class="meta">Open seating from 5:15pm, before heading ashore</span><span class="desc">Eat before you go into port so you're not rushed once the gangway opens at 8pm.</span></li>
+              <li><b>Red Fish Blue Fish, evening bite</b><span class="meta">~8:30 – 9:00pm</span><span class="desc">A seafood shack on the harbour — share one small order rather than a full second dinner.</span></li>
+              <li class="indulge"><b>Pendray Tea House, full tea service</b><span class="meta">If ashore earlier in the evening window</span><span class="desc">Tiered scones, clotted cream and pastries — a proper splurge to close out the trip.</span></li>
+            </ul>
+          </div>
+          <div class="extra-box">
+            <div class="label">⛴ Onboard</div>
+            <ul>
+              <li><b>Specialty dining or spa, daytime</b><span class="desc">The ship is cruising toward Victoria most of the day — a good window for Pinnacle Grill or a last spa treatment.</span></li>
+            </ul>
+          </div>
+          <div class="extra-box">
+            <div class="label">🧭 Do &amp; shop</div>
+            <ul>
+              <li><b>Inner Harbour stroll</b><span class="desc">Past the Fairmont Empress and BC Legislature, lit up at night.</span></li>
+              <li><b>Government Street &amp; Chinatown</b><span class="desc">Shops stay open into the evening for cruise arrivals; Fan Tan Alley is worth a look.</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 8 -->
+    <div class="day">
+      <div class="day-marker"><span class="n">8</span><span class="u">SAT</span></div>
+      <div class="card">
+        <div class="card-top">
+          <div>
+            <h3>Seattle, Washington</h3>
+            <div class="when">Saturday, August 15 · Disembarkation · arrives 7:00am</div>
+          </div>
+          <div class="tag-row"><span class="tag weather">75° / 58°F</span></div>
+        </div>
+        <div class="card-body"><p>Voyage complete. Have breakfast on board before your final morning ashore.</p></div>
+        <div class="extra-grid">
+          <div class="extra-box">
+            <div class="label">🍽 Eat</div>
+            <ul>
+              <li><b>Lido Market, breakfast</b><span class="meta">From ~6:00am, before disembarkation</span><span class="desc">Protein and fruit over pastries — a light travel-day start.</span></li>
+              <li class="indulge"><b>Warm Dutch apple pie or chocolate croissant</b><span class="meta">Same breakfast, one last treat</span><span class="desc">A fitting way to close out the trip.</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ---------- PACKING ---------- -->
+  <div class="section-head">
+    <p class="eyebrow">Packing guide</p>
+    <h2>What to bring</h2>
+    <p>Built around one rule for this route: layers you can add and shed fast, and a waterproof shell you're never without. Shared items first, then a short list specific to each of you. Tap to check off as you pack.</p>
+  </div>
+
+  <div class="pack-card" style="margin-bottom:20px;">
+    <h4>🧥 Shared — layers &amp; outerwear</h4>
+    <ul id="list-shared-layers"></ul>
+  </div>
+
+  <div class="pack-grid">
+    <div class="pack-card">
+      <h4>🥾 Shared — footwear &amp; gear</h4>
+      <ul id="list-shared-gear"></ul>
+    </div>
+    <div class="pack-card">
+      <h4>🎒 Shared — excursion &amp; documents</h4>
+      <ul id="list-shared-docs"></ul>
+    </div>
+  </div>
+
+  <div class="pack-grid" style="margin-top:20px;">
+    <div class="pack-card">
+      <h4>👩 For Yanely</h4>
+      <ul id="list-yanely"></ul>
+    </div>
+    <div class="pack-card">
+      <h4>👨 For Thomas</h4>
+      <ul id="list-thomas"></ul>
+    </div>
+  </div>
+
+  <footer>
+    <span class="anchor">⚓</span>
+    Have a wonderful trip, Yanely &amp; Thomas.
+  </footer>
+</div>
+
+<script>
+const data = {
+  'list-shared-layers': [
+    ['Waterproof, windproof shell jacket', 'Non-negotiable — every port and excursion note calls for it'],
+    ['Fleece or wool mid-layer', 'For Juneau, Glacier Bay, Sitka (upper 40s–50s°F)'],
+    ['3–4 long-sleeve base layers', 'Moisture-wicking, not cotton'],
+    ['Lightweight packable down or insulated vest', 'Extra warmth for Glacier Bay morning viewing'],
+    ['2–3 pairs of pants, quick-dry', 'Jeans stay wet all day if it rains'],
+    ['Warm hat, gloves, scarf/buff', 'Required gear note on Sitka + Ketchikan tours'],
+    ['1–2 lighter outfits', 'Seattle embarkation and Victoria evening are mild'],
+    ['Swimsuit', 'For the ship pool/hot tub'],
+  ],
+  'list-shared-gear': [
+    ['Comfortable closed-toe walking shoes', 'For the Tongass hike and Ketchikan tours'],
+    ['Waterproof/rubber-soled shoes or boots', 'Ketchikan and Sitka are the wettest ports'],
+    ['Binoculars — 1 pair, or 1 each', 'Called out repeatedly for Glacier Bay and Juneau wildlife'],
+    ['Daypack, packable', 'For layers you shed mid-excursion'],
+    ['Reusable water bottle'],
+    ['Compact umbrella', 'For the town portions in Sitka/Ketchikan'],
+    ['Seasickness remedy', 'For the two sea days'],
+    ['Portable phone charger / power bank'],
+  ],
+  'list-shared-docs': [
+    ['Passports (or passport cards)', 'Required for the Victoria, BC stop'],
+    ['Cruise documents &amp; boarding passes'],
+    ['Credit card + small cash (CAD not needed — USD works in Victoria shops, but some vendors prefer local)'],
+    ['Camera + fully charged batteries', 'Charge the night before Glacier Bay especially'],
+    ['Dry bag or ziplock for phone/camera', 'For the ZipRider and any boat tours'],
+    ['Sunblock &amp; sunglasses', 'Glacier glare is stronger than it looks'],
+    ['Small day-of cash for tips (helicopter, ZipRider, tour guides)'],
+    ['Copy of shore excursion confirmations'],
+  ],
+  'list-yanely': [
+    ['Moisture-wicking base layers, women\'s fit'],
+    ['Lightweight hiking leggings'],
+    ['Hair ties, hat with brim for sun/wind'],
+    ['Toiletries + travel-size skincare'],
+    ['One nicer outfit', 'For dinner or Victoria evening ashore'],
+    ['Compact makeup bag'],
+  ],
+  'list-thomas': [
+    ['Moisture-wicking base layers, men\'s fit'],
+    ['Quick-dry cargo or hiking pants'],
+    ['Ball cap or beanie'],
+    ['Toiletries + razor'],
+    ['One collared shirt', 'For dinner or Victoria evening ashore'],
+    ['Extra pair of wool socks', 'Wet feet ruin a hiking day fast'],
+  ],
+};
+
+Object.entries(data).forEach(([id, items]) => {
+  const ul = document.getElementById(id);
+  items.forEach((item, i) => {
+    const [text, note] = item;
+    const cid = id + '-' + i;
+    const li = document.createElement('li');
+    li.innerHTML = `<input type="checkbox" id="${cid}"><label for="${cid}">${text}${note ? `<span class="note">${note}</span>` : ''}</label>`;
+    ul.appendChild(li);
+  });
+});
+</script>
+
+</body>
+</html>
